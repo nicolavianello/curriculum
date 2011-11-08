@@ -1,0 +1,78 @@
+\documentclass[11pt,stdletter,dateno,sigleft]{newlfm}
+% \usepackage{kpfonts}
+\usepackage{url}
+\usepackage{charter}
+\usepackage{fontspec,lipsum}
+\setromanfont{Minion Pro}
+\setsansfont{Myriad Pro}
+
+\widowpenalty=1000
+\clubpenalty=1000
+
+%for the logo
+\newsavebox{\RFXlogo}
+\sbox{\RFXlogo}{%
+	\parbox[b]{1.75in}{%
+		\vspace{0.5in}%
+		\includegraphics[scale=.2,ext=.pdf]
+		{RFX-logo}%
+	}%
+}%
+\makeletterhead{Uiuc}{\Lheader{\usebox{\RFXlogo}}}
+
+% for the signature
+\newsavebox{\Sigx} 
+\sbox{\Sigx}{%
+          \includegraphics[height=7\baselineskip]{signature.pdf}}
+\signature{\usebox{\Sigx}}
+\makesignature{NV}{\newsavebox{\Signature}} 
+
+\newlfmP{headermarginskip=20pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{dateskipafter=20pt}
+\newlfmP{addrfromphone}
+\newlfmP{addrfromemail}
+\PhrPhone{Phone}
+\PhrEmail{Email}
+
+\lthUiuc
+\sigNV
+
+\namefrom{Nicola Vianello}
+\addrfrom{%
+    \today\\[10pt]
+    Consorzio RFX \\
+    Associazione EURATOM-Enea sulla Fusione\\
+    C.so Stati Uniti 4\\
+    35127 Padova, Italy
+}
+\phonefrom{+39 0498295991}
+\emailfrom{nicola.vianello@igi.cnr.it}
+
+\addrto{%
+\textbf{To:} ITER H.R. \\
+\textbf{Job Title:} Iter\\
+\textbf{Ref:}  \\
+France}
+
+\greetto{To Whom It May Concern,}
+\closeline{Sincerely,}
+\begin{document}
+\begin{newlfm}
+my name is Nicola Vianello, I am a 36 years old Phd Physic Scientist,
+currently working at the RFX-mod experiment. I would like to apply for
+the aforementioned job position
+
+I've been involved in Fusion plasma Science since my M.Sci. Thesis in
+Physics 1999. My primary research interests is transport phenomena in fusion
+oriented plasmas with strong emphasis on non-linear dynamics. I have
+addressed the problem both experimentally, through the collection, 
+analysis, interpretation and modeling of experimental data, and
+numerically, through the use of fluid codes.  
+
+
+Thank you for your consideration.  I look forward to
+hearing from you.
+
+\end{newlfm}
+\end{document}
