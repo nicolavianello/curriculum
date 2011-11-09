@@ -1,13 +1,13 @@
-\documentclass[11pt,stdletter,dateno,sigleft]{newlfm}
+\documentclass[12pt,stdletter,a4paper,dateno,sigleft]{newlfm}
 % \usepackage{kpfonts}
 \usepackage{url}
-\usepackage{charter}
+%\usepackage{charter}
 \usepackage{fontspec,lipsum}
 \setromanfont{Minion Pro}
 \setsansfont{Myriad Pro}
 
-\widowpenalty=1000
-\clubpenalty=1000
+%\widowpenalty=1000
+%\clubpenalty=1000
 
 %for the logo
 % \newsavebox{\RFXlogo}
@@ -27,11 +27,14 @@
 \signature{\usebox{\Sigx}}
 \makesignature{NV}{\newsavebox{\Signature}} 
 
-\newlfmP{headermarginskip=20pt}
+\newlfmP{headermarginskip=10pt}
 \newlfmP{sigsize=50pt}
 \newlfmP{dateskipafter=20pt}
+%\newlfmP{paperheight=700pt}
 \newlfmP{addrfromphone}
 \newlfmP{addrfromemail}
+\newlfmP{MinFoot=13pt}
+%\newlfmP{MinHead=50pt}
 \PhrPhone{Phone}
 \PhrEmail{Email}
 \encllist{Curriculum Vitae, Reference Letter from Prof. Francesco Gnesotto}
