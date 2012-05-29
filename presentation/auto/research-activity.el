@@ -11,8 +11,6 @@
      "multimedia"
      "amsmath"
      "listings"
-     "babel"
-     "english"
      "palatino"
      "latex2e"
      "beamer10"
