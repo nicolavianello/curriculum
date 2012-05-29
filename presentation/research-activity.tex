@@ -1,6 +1,8 @@
 \documentclass[t,10pt]{beamer}
-\usetheme[official=true, conference=\mbox{N. Vianello
+\usetheme[official=true, titlebgimage=RFX-transparent-logo,%
+conference=\mbox{N. Vianello
   @ JET 01 June 2012},pagelogo=false]{Rfx}
+\usepackage{palatino}
 \usepackage[english]{babel}
 \usepackage{listings,amsmath,multimedia}
 \usepackage{tangocolors}
@@ -24,14 +26,15 @@
 % add a beamer template that sets the saved argument in a box.
 % The * means that the beamer font and color "footline extra" are automatically added. 
 \defbeamertemplate*{footline extra}{default}{
-    \begin{beamercolorbox}[ht=2.25ex,dp=1ex,leftskip=\Gm@lmargin]{footline extra}
+    \begin{beamercolorbox}[ht=2.25ex,dp=1ex,leftskip=\Gm@lmargin]{%
+        footline extra}
     \insertfootlineextra
-    %\par\vspace{2.5pt}
     \end{beamercolorbox}
 }
 
 \addtobeamertemplate{footline}{%
-    % set the box with the extra footline material but make it add no vertical space
+    % set the box with the extra footline material
+    % \item but make it add no vertical space
     \setbox\footlineextrabox=\vbox{\usebeamertemplate*{footline extra}}
     \vskip -\ht\footlineextrabox
     \vskip -\dp\footlineextrabox
@@ -57,6 +60,37 @@ Activity}
 \begin{titleframe}
 \end{titleframe}
 
+\begin{frame}{ITER Research Plan framework}
+\begin{itemize}
+\item European Fusion Research focused on unresolved physic and
+technological problems in support of ITER
+\item ITER research plan (IRP) has individuate 12 top operation risks which 
+should be addressed by the world-wide fusion programme
+\begin{enumerate}
+\item \color<2>{verylightgrey} Inadequate disruption mitigation
+\item \color<2>{rfxred} H-mode power threshold at high end of
+  uncertainty range
+\item \color<2>{rfxred} Inadequate ELM mitigation schemes
+\item \color<2>{verylightgrey} Inadequate vertical stability control
+\item \color<2>{verylightgrey}Lack of reliable high power heating during
+  non-active phase of programme
+\item \color<2>{verylightgrey} Unacceptable divertor performance with tungsten PFCs
+\item \color<2>{rfxred} Lack of plasma rotation leads to a
+  degradation of plasma performance
+\item \color<2>{verylightgrey} High levels of tritium retention require more
+  frequent tritium removal procedures than foreseen
+\item \color<2>{verylightgrey} Incompatibility of core plasma requirements for Q=10 with
+  radiative divertor operation
+\item \color<2>{rfxred}Inability to achieve densities near
+  Greenwald value for required Q=10
+\item \color<2>{verylightgrey} Inadeguate particle control to sustain
+  high-Q plasma scenario
+\end{enumerate}
+\end{itemize}
+
+\end{frame}
+
+
 \begin{frame}{Personal research interest}
 \begin{itemize}
 {\large\item Actively involved in fusion plasma science since the
@@ -64,11 +98,14 @@ M.Sci. thesis in 1999
 \item Personal research interests can be summarized in four main
   macro-areas
 \begin{description}
-\item[(A)] \textcolor{taorange}{Flows \& Turbulence induced transport in magnetized plasmas}
-\item[(B)]\textcolor{ta3chameleon}{Emerging of electromagnetic structures}
-\item[(C)] \textcolor{tascarletred}{3D physics and helical plasmas}
-\item[(D)] \textcolor{ta3skyblue}{Statistical characterization of
-    electromagnetic fluctuations}
+\item[(A)] \textcolor{taorange}{Flows \& Turbulence induced transport
+    $\Rightarrow$ points 2,7}
+\item[(B)]\textcolor{ta3chameleon}{Emerging of electromagnetic
+    structures $\Rightarrow$ points 2,7}
+\item[(C)] \textcolor{tascarletred}{3D physics and helical plasmas
+    $\Rightarrow$ points 2,3,7,10}
+% \item[(D)] \textcolor{ta3skyblue}{Statistical characterization of
+%     electromagnetic fluctuations}
 \end{description}
 }\end{itemize}
 \end{frame}
@@ -146,7 +183,7 @@ $\langle \tilde{v}_{\perp}\tilde{v}_r\tilde{n}\rangle$
 \item Evaluation of transport contribution due to coherent structures
 \end{itemize}
 \begin{center}
-\includegraphics[height=3cm]{structure-diffusivity}
+\includegraphics[height=2.8cm]{structure-diffusivity}
 \end{center}
 \end{column}
 \end{columns}
@@ -291,12 +328,12 @@ $\langle \tilde{v}_{\perp}\tilde{v}_r\tilde{n}\rangle$
 \only<4>{
 \begin{columns}[c]
 \begin{column}{0.5\textwidth}
-\includegraphics[height=8cm]{Shot26317_ShiftFlow}
+\includegraphics[height=7.2cm]{Shot26317_ShiftFlow}
 \end{column}
 \begin{column}{0.5\textwidth}
 \begin{itemize}
 \item Similar phenomenology appears in High density regime
-\item In this case, radiative collapse caused by density accumulation caused by perpendicular flow inversion
+\item In this case, radiative collapse caused by density accumulation induced by perpendicular flow inversion
 \item Accumulation point coincides with the X-point of the magnetic islands (asterisks track accumulation point)
  \end{itemize}
 \end{column}
@@ -334,7 +371,7 @@ $\langle \tilde{v}_{\perp}\tilde{v}_r\tilde{n}\rangle$
 \end{frame}
 
 
-\begin{frame}{Coordination experience: EFDA Transport topical Group}
+\begin{frame}{Coordination experience: EFDA TTG}
   \begin{itemize}[<+->]
 \item In 2011 I've been appointed as coordinator of the working group
   \emph{3D field effects in edge and SOL and diagnostic development}
@@ -343,12 +380,36 @@ $\langle \tilde{v}_{\perp}\tilde{v}_r\tilde{n}\rangle$
   highlighted coming from 11 different European Associations
 \item Discussion stimulated through remote meeting and shared wiki
   page information
-\item Monitor of the activities exposed to the STAC committee 
- 
+\item Activities monitored and reported to STAC committee 
 \end{itemize} 
 \end{frame}
 
+\begin{frame}{Scientific topics to be explored}
+\begin{itemize}
+\item Assessment of ITER operation scenarios with the ILW
+  \begin{itemize}
+    \item Complete the characterization of the different physics of ILW with respect to CW
+     \item Why the pedestal is cooler? Is there a different physics?
+    \item Is the SOL different? And what about the separatrix?
+    \item If pedestal is
+    somehow a balance between shear flow and turbulence, what is different? Access to detail investigation
+    of pedestal flow.
+  \end{itemize}
+\item Develop and exploit ELM mitigation techniques:
+\begin{itemize}
+ \item Mandatory is the understanding of the \emph{possible different ELMs}
+ \item Why ELMs are \emph{slower}?
+ \item Establish the dynamics of the recovery phase
+   extending inter-machine comparison also in the recovery phase
+ \item Can the different ELMs be caused by different edge current profiles?
+ \item Role of 3D fields for ELMs for the complete comprehension of RMP mitigation experiments
+ \item Role of 3D fields on the flow: ambipolar response to magnetic perturbation 
+   
+\end{itemize}
 
+
+\end{itemize}
+\end{frame}
 
 
 \end{document}

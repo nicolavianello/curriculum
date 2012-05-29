@@ -109,7 +109,7 @@ ax.fill_between(bm, costante[i] * (vavg - vstd), costante[i] * (vavg + vstd),
 # ax.set_xlim([ - np.pi, np.pi])
 ax.set_xlim([ 0, 2 * np.pi])
 ax.set_ylim([ - 300, 300])
-ax.set_xlabel(r'u', fontsize = 18)
+ax.set_xlabel(r'helical angle', fontsize = 18)
 ax.set_ylabel(r'$\delta$v$_{\perp}$ [m/s]', fontsize = 18)
 lab = [r'0', r'$\pi/2 $', '$\pi$', r'$3\pi/2$', r'$2\pi$']
 plt.xticks([ 0, np.pi / 2., np.pi, 3 * np.pi / 2., 2 * np.pi], lab)
