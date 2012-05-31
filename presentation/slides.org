@@ -1,0 +1,96 @@
+* Slides
+** Slide 1
+ - Good morning, my name is N. Vianello and I am a physisicist working at Consorzio RFX, Padova
+ - In order to introduce you my personal research background I decided to start from what
+   have been indicated as the twelve top operation risks which
+   according to ITER Research Plans should be addressed by the world-wide fusion community.
+   I believe all of you are familiar with this list so I will not go
+   through each of them. What I would like to underline, since the
+   beginning is that my personal research interests fit very well with
+   at least 4 of these points here underlined.
+   
+
+** Slide 2
+ - As I told I'm a physicists involved in fusion plasma science since
+   my Ms.Sci. thesis in 1999.
+ - My personal research interests can be summarized into three main macro-areas
+   + Flow and turbulence induced transport facing problems which can
+     be of some interests for points 2 and 7 of the previous lists
+   + Emerging of electromagnetic coherent structures and filaments,
+     which again is a scientific topic which can be suited for points
+     2 and 7
+   + 3D physics and helical plasmas which face problems related to all
+     the points highlighted
+
+** Slide 3
+ - Concerning the first topic, Flows & Turbulence induced transport
+   the main results may be summarized as follow:
+   + I've been working on momentum flux generation due to off-diagonal
+     terms of the stress tensor in Reversed Field Pinches, including
+     the role of Reynolds stress, Maxwell stress and non-linear
+     momentum flux. I've proved that beside the high level of magnetic
+     fluctuations observed in RFPs, edge flow is primarly due to
+     the reynolds stress component
+   + I've been actively involved in experiment for sheared flow
+     modification through edge biasing, revealing the positive effects
+     on plasma transport with a change of relative phase between
+     density and potential fluctuations, not homogeneous in the
+     perpendicular k numer
+
+** Slide 4
+ - For a long time I've been involved in the characterization,
+   modeling and comprehension of blobs. Starting from the
+   perpendicular plane and completely characterize their features in
+   the perpendicular plane including pressure, temperature and potential
+ - And determining their role in the anomalous diffusion observed at
+   the edge of RFPs. In particular besides their convective motion
+   towards the external part of the plasmas these structures
+   contribute to the diffusion through the cohalecence and merging
+
+** Slide 5 and 6
+ - Besides the characterization in the perpendicular plane I've
+   focused on the parallel dynamics of these structures.  In
+   particular I've developed the diagnostic and coordinated the
+   activities which provide the first direct experimental measurements
+   of the parallel current and the parallel vorticity associated to a
+   plasma blob in a fusion relevant plasma
+ - The competences developed on the RFP experiment RFX-mod have been
+   applied also to other configurations in order to obtain information
+   on the parallel current associated to plasma filaments also in
+   other devices
+ - In particular a similar diagnostic, constititued of a miniaturized
+   pick-up coil has been used on ASDEX-Upgrade tokamak, and through
+   the investigation of the magnetic signatures in all the three
+   components associated to a type-I ELM filaments it has been
+   possible to infer the first direct measurement of parallel current
+   associated to single filament, proving that ELMs actually convect a
+   certain amount of current in the SOL
+ - I've also been actively involved in the measurement in a small
+   plasma device for turbulence studies, the simple magnetized torus
+   TORPEX, providing the first direct 2D measurements of parallel
+   current associated to a resistive-interchange induced plasma blob
+ - Final collaboration on the topics of filaments has been established
+   with the spanish stellarator TJ-II collaborating with
+   C. Hidalgo. On TJ-II I've collaborated in the design of the a
+   suitable diagnostic for the contemperanoeus measurements of plasma
+   vorticity and parallel current. This tool have been used in ICRH
+   and NBI plasmas at different values of beta both providing
+   measurements of current filaments associated to plasma blob in the
+   confined region. Furthermore the same tool offer the possibility to
+   establish the role of Maxwell stress in driving momentum and its
+   variation in the location of resonances
+ - I have also active collaboration with a chinese team working on
+   type-III ELMs in China
+ - I believe that these overview on this particular subject prove the
+   intense international collaborations established 
+
+** Slide 7
+ - The last scientific topics which I've been actively involved in si
+   the 3D physics associated to helical plasmas
+ - I think all of you are aware of the topological transition observed
+   in high current regimes in RFPs, which exhibits an helical core
+   surrounded by an almost quasi-simmetric boundary
+ - This new topological regimes is characterized by the appearence of
+   an internal trasnport barrier whose location coincides with a local
+   maxima of the q value, in analogy to the tokamak ITB
+ - 
