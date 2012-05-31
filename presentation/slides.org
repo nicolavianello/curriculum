@@ -9,7 +9,6 @@
    beginning is that my personal research interests fit very well with
    at least 4 of these points here underlined.
    
-
 ** Slide 2
  - As I told I'm a physicists involved in fusion plasma science since
    my Ms.Sci. thesis in 1999.
@@ -83,7 +82,7 @@
    type-III ELMs in China
  - I believe that these overview on this particular subject prove the
    intense international collaborations established 
-
+   
 ** Slide 7
  - The last scientific topics which I've been actively involved in si
    the 3D physics associated to helical plasmas
@@ -93,4 +92,99 @@
  - This new topological regimes is characterized by the appearence of
    an internal trasnport barrier whose location coincides with a local
    maxima of the q value, in analogy to the tokamak ITB
- - 
+ - The small residual helical ripple at the edge (order of 1 % ot the
+   total field) is sufficient to modulate differently the ion-elecron
+   escape and consequently an ambipolar electric field, and
+   corresponding E\times B flow builds up. This flow exhibits the same
+   modulation as the dominant mode
+ - In an analogous way in high density regimes the mode spectrum is
+   dominated by an (m,n) = (0,1) perturbation. as a consequenque also
+   the flow is modulated with the same periodicity with a region of
+   flow inversion. This is the cause of the appearence of an highly
+   radiative zone of accumulation which is found to coincide with the
+   X point of the (0,1) mode. This experimental observation can be
+   coincilied with recent theories of highly radiative magnetici
+   island proposed by Gates and Delgado, although they erroneously
+   does not take into account the ambipolar electric field response
+
+** Slide 8
+ - As far as my JET activities is concerned I must admit I have a
+   relative experience on JET. Nevertheless I start to collaborate on
+   two different topics
+   + The observation of toroidal braking in EFCC experiments, trying
+     to determine the amount of braking from magnetic measurements and
+     comparing diferent dosing rate and also as a general view trying
+     to observe differences with CW
+   + Divertor oscillations and M-Mode. ICRH plasmas and partially NBI
+     heated plasma exhibits oscillations with inner-outer divertor out
+     of phase which for ICRH are precursor of the M-mode an n=0 mode
+     characterized by high density gradient at the pedestal but lower
+     temperature. A sort of complementary with respect to the I-mode
+     observed in Alcator C-mod
+
+** Slide 9
+ - Concerning my coordination activity I had experience both in my
+   home laboratory and in the framework of EFDA TTG.
+ - As far as RFX-mod is concerned, RFX-mod experimental programs is
+   coordianated by task force Leader which cohaudivates the Scientific coordinators
+ - The objectives of scientific activities are determined on the basis
+   of experimental proposal (around 100 for year) and the time machine
+   is granted on the basis of scientific motivation taking into
+   account machine condition including wall condition and eventual
+   plant failure
+ - For RFX-mod I've served as Task Force Leader for two years for two
+   different, but somehow related task forces
+
+** Slide 10
+- Furthermore in 2011 I've been appointed as coordinator of the
+  working group 3D field effects in edge and SOL and diagnostic
+  development under EFDA transport topical group.
+- As duties I've to monitor and coordinate activities proposed on the
+  topic and coming from 11 different European Association, stimulating
+  discussion through remote partecipation and reporting the activities
+  to the STAC commitee
+- I'm presently in the programme commitee for the forthcoming 17th
+  joint EU-US TTF meeting, as chairman for the session on Edge and SOL
+  turbulence and transport
+
+** Slide 11
+ - As a final step I've been asked to provide a personal opinion on
+   the view of the task force and consequently, starting from the
+   Draft Programme for the 2013 campaign, I've tried to individuate
+   which are, according to me the main physical issues at least on the
+   part which pertains to my personal competences
+   + On the headline 2.2, assess plasma scenario with regards to power
+     loads and their mitigation and control I think it's foundamental
+     to finalize the characterization of the ELMs in the ILW, which
+     appear different as slower, and somehow a little less severe. In
+     the framework of the peeling-balloning stability it could be
+     deteremine if the new wall determines different pressure/current
+     profile thus moving JET in a different plane of the stability diagram.
+   + Related to this is the comprehension of the effects of RMP, on
+     these new ELMs. In particular efforts should be devoted to the
+     comprhenesion of the ambipolar response to the perturbation which
+     could change in dependence of the collisionality and try to
+     understand if this difference is related somehow to the different
+     ELM mitigation/suppression effects and collisionality
+   + It should also be tested if the newly proposed theory of
+     radiative magnetic island, eventually with the inclusion of
+     aforemention ambipolar response has really something to do with
+     the density Limit and if eventually this can be actively modified
+     (edge power deposition for example) as ITER is supposed to
+     routinely operate around the greenwald fraction
+ - As far as Confinement, pedestal and ELM physics is concerned
+   efforts should be devoted to finalize the characterization of the
+   new pedestal found in ILW. Why it's generally cooler, and if this
+   is related to different or just enhanced loss mechanism. If this is
+   the case effort should be devoted to those diagnostic which could
+   provide an insight on pedestal dynamics (i.e correlation
+   reflectometry for example)
+ - If the pedestal is really the result of a balance between flow and
+   turbulence what is eventually different
+ - I also think that as done recently in ASDEX some effort should be
+   devoted on the GAM/turbulence/flow mechanism, as if really it play
+   a role in the LH transition could account for the different/lower
+   L-H power threshold observed in ILW
+ - Finally also in view of future DT or generally high energy beams,
+   the role played by RMP on fast particle should be addressed if
+   these two elements will be a key ingredient in future devices.
