@@ -1,0 +1,262 @@
+%%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep to referal to http://www.howtotex.com/ here.
+%%% February 2011
+
+%%%%% Preamble
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper,margin=2.5cm}
+\usepackage[latin1]{inputenc}							% Input encoding
+\usepackage{amsmath}									% Math
+\usepackage{fontspec,lipsum}
+\defaultfontfeatures{Ligatures=TeX}
+\setromanfont{Minion Pro}
+\setsansfont{Myriad Pro}
+\usepackage{xcolor}
+\definecolor{bl}{rgb}{0.0,0.2,0.6} 
+
+\usepackage[style=phys,biblabel=brackets,backend=biber]{biblatex}
+\addbibresource{../utils/biblio.bib}
+\addbibresource{../utils/others.bib}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+
+\usepackage{sectsty}
+\usepackage[compact]{titlesec} 
+\allsectionsfont{\color{bl}\scshape\selectfont}
+
+%%%%% Definitions
+% Define a new command that prints the title only
+\makeatletter							% Begin definition
+\def\printtitle{%						% Define command: \printtitle
+    {\color{bl} \centering \huge \sc \textbf{\@title}\par}}		% Typesetting
+\makeatother							% End definition
+
+\title{Personal Research Interest of Dr. Vianello}
+
+% Define a new command that prints the author(s) only
+\makeatletter							% Begin definition
+\def\printauthor{%					% Define command: \printauthor
+    {\centering \small \@author}}				% Typesetting
+\makeatother							% End definition
+
+\author{%
+   \vspace{10pt}
+	N. Vianello\\
+	\vspace{20pt}
+	}
+
+% Custom headers and footers
+\usepackage{fancyhdr}
+	\pagestyle{fancy}					% Enabling the custom headers/footers
+\usepackage{lastpage}	
+	% Header (empty)
+	\lhead{}
+	\chead{}
+	\rhead{}
+	% Footer (you may change this to your own needs)
+	\lfoot{\footnotesize Dr. Vianello Research Interest}
+	\cfoot{}
+	\rfoot{\footnotesize page \thepage\ of \pageref{LastPage}}	% "Page 1 of 2"
+	\renewcommand{\headrulewidth}{0.0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+
+% Change the abstract environment
+\usepackage[runin]{abstract}			% runin option for a run-in title
+\setlength\absleftindent{30pt}		% left margin
+\setlength\absrightindent{30pt}		% right margin
+\abslabeldelim{\quad}						% 
+\setlength{\abstitleskip}{-10pt}
+\renewcommand{\abstractname}{}
+\renewcommand{\abstracttextfont}{\color{bl} \small \slshape}	% slanted text
+
+
+%%% Start of the document
+\begin{document}
+%%% Top of the page: Author, Title and Abstact
+\printtitle 
+
+\printauthor
+
+% \begin{abstract}
+% Viene qui di seguito descritta una proposta per attivit\`a di
+% dottorato da svolgersi presso il gruppo FB. L'attivit\`a risulta
+% articolata e prevede lo sviluppo di nozioni sia 
+% sperimentali, includendo attivit\`a di allestimento di apparati
+% diagnostici, che interpretativi tramite l'analisi dati che
+% modellistici. L'attivit\`a \`e volta a creare una migliore comprensione della
+% regione esterna di RFX-mod permettendo inoltre di stabilire analogie e
+% corrispondenti collaborazioni con attivit\`a analoghe presenti nei
+% tokamak nel pi\`u ampio ambito degli studi delle Resonant Magnetic Perturbation.
+% \end{abstract}
+
+%%% Start of the 'real' content of the article, using a two column layout
+% \section*{Motivazioni}
+Dr. Vianello's research activity has been devoted to the analysis,
+interpretation and modeling of experimental and numerical results
+obtained in the framework of high temperature plasmas, with emphasis
+on magnetically confined plasmas. More in details Dr. Vianello focused
+his attention on the electromagnetic fluctuations induced transport
+phenomena occurring in the edge region of confined plasmas, 
+with interpretation in the wider framework of turbulence
+theory. 
+
+It is well known that transport phenomena in thermonuclear plasmas are
+governed by electromagnetic turbulence, which represents the main
+cause of the so-called \emph{anomalous transport}. Scientific interest
+is further enhanced by the consideration that magnetically confined
+plasmas are a complex and self-organized system, which thus represents
+an ideal environment for non-linear dynamics studies.
+
+During his research activity Dr. Vianello has collected a large experience on
+electromagnetic transport analysis, working on different
+magnetic configurations, from Reversed Field Pinches (working on
+RFX-mod operating in Padova, Extrap-T2R operating in Stockholm and
+TPE-1RM20 which was in operation in Japan), stellarators (with
+experimental activity on TJ-II heliac type operating in Spain) and Tokamaks
+(ASDEX-Upgrade and JET). 
+In the following a brief overview of the principal results obtained
+during his research activity is reported.
+\subsubsection*{Electrostatic turbulence induced transport and sheared
+  flow interaction}
+At the beginning of his career Dr. Vianello studied the effect of
+active modification of flow shear, obtained
+through edge biasing experiment performed on RFX Reversed Field Pinch,
+on electrostatic turbulence induced particle transport
+\parencite{Antoni:2000p3587}. Indeed Dr. Vianello has experimentally proved that
+flow shear enhancement causes a reduction of particle losses due to the
+electrostatic turbulence obtained through a modification of the phase
+difference between density and potential fluctuations. This reduction
+is not homogeneous in $k$-space but concentrated around wavenumber
+where restitive g-modes are expected to be unstable
+\parencite{Zuin:2010p4689}. 
+\subsubsection*{Intermittency and self-similarity studies}
+Strong effort has been devoted to the studies of the
+statistical properties of electromagnetic turbulence as measured at
+the edge of fusion relevant plasmas. It has been proved that
+magnetically confined turbulence exhibits an high degree of
+intermittency: this phenomenon is actually responsible for the lack of
+self-similarity which causes the breaking of Kolmogorow paradigm of
+turbulence energy cascade with the existence of localized (in
+time and space) stronger fluctuations which can be better described as
+\emph{coherent structure} observed in various devices
+\cite{Spolaore:2004p245, Vianello:2002p3579,eps31tpe}. The experimental verification of this lack
+of self-similarity has been made possible through a multi-scale
+analysis, realized through the application of advanced analysis
+technique 
+borrowed from fluid dynamics such as
+\emph{Continuos Wavelet Transform} and \emph{Local Intermittency
+  Measurements}. The observations done by Dr. Vianello and co-authors
+allowed also to discriminate the applicability of the so-called
+\emph{Self Organized Criticality}  paradigm to fusion plasma
+turbulence: indeed it has been proved that this dynamical model does
+not apply to fusion plasmas \cite{Spada:2001p3574,Antoni:2001p3221} as
+SOC models are inherently self-similar (apart models where
+characteristics scales, which are in open contradiction with the
+original SOC paradigm, are \emph{ad hoc} introduced). Interestingly
+similar observations have been compared with solar wind and
+hydrodynamical turbulence\cite{Carbone:2002p2809} showing remarkable similarities.
+
+\subsubsection*{Coherent structures and filaments}
+As aforementioned intermittent character of electromagnetic turbulence
+is caused by the presence of strong localized fluctuations often
+referred as \emph{blobs} or \emph{coherent structure}. Extensive
+experimental and interpretative work has been done by Dr. Vianello in
+order to characterize completely these fluctuations. These structure
+exhibit an higher pressure than the surrounding plasma, with a
+vortex-like velocity pattern resembling monopolar or dipolar vortices \cite{Antoni:2006p3585,Serianni:2007p3575}.
+They have been
+found to strongly contribute to particle and energy transport through
+their radial convective motion and also through an enhancement of
+particle and heat diffusivity through their merging and coalescence
+\cite{Spolaore:2004p245,Spolaore:2005p2243}.
+These structures have also been electromagnetically characterized,
+providing the first direct measurements of the parallel current
+associated to a plasma blob in a thermonuclear relevant plasma
+\cite{Spolaore:2009p4115,Spolaore2010}. An accurate interpretation of the
+measurements proved also that these blobs, as detected in the edge
+region of an RFP plasma are actually \emph{drift-kinetic alfv\'en
+  vortices} \cite{Vianello:2010p4670} resulting from the non-linear
+coupling of drift and kinetic alfv\'en waves. Indeed pioneering
+studies of current filaments associated to plasma blobs have been
+extended during the research activity of Dr.Vianello with
+measurements performed in stellarators \cite{Spolaore:eps2012}, in
+simple magnetized torus \cite{Furno:2011cs,0741-3335-53-12-124016} and
+in low current ohmic tokamak \cite{Spolaore:eps2012}. Expertise in
+current filaments studies has been extended to the studies of ELM
+filaments providing for the first time an experimental direct estimation of the
+current density associated to a type-I filament
+\cite{PhysRevLett.106.125002,Naulin:2011im,Muller:2011kj}.
+\subsubsection*{Momentum transport studies}
+Deepening the subject of interaction between turbulence and flow,
+Dr. Vianello focused on the turbulence flow generation processes
+\cite{Vianello:2005p1976,Vianello:2005p2671}
+through Reynolds and Maxwell stresses. Providing pioneering
+measurements on Reversed Field Pinches of both the quantities, and
+actually first measurements of Maxwell stress in a fusion relevant
+plasma, Dr. Vianello proved that, despite the high level of magnetic
+fluctuation characterizing the RFP configuration, perpendicular flow
+is still driven by electrostatic turbulence. The analysis has been
+further extended considering the whole energy transfer process between
+fluctuations and mean fields, including Kinetic and Magnetic energies
+\cite{Vianello:2006p1149}, trying to establish the whole scheme of
+relationship between energetic basins and sinks. Interestingly those
+analysis have drained attention very recently as they are suspected to
+have a role in driving H mode in tokamak plasmas as shown for example
+in \cite{Manz:2012jq,Manz:2012hh}, through the so-called Limit Cycle Oscillations.
+
+
+\subsubsection*{3D Physics}
+In present fusion research a strong effort is devoted to the
+comprehension of the effects of a 3D magnetic field on the plasma.
+Indeed, apart from the research line devoted to strongly 3D shaped
+plasmas as stellarators \cite{Boozer:2009p4091}, non-axysimmetric
+magnetic fields are now considered as fundamental also for
+configurations long considered as toroidally symmetric, or
+inherently 2D. In fact, 3D fields are considered for example as a
+viable technique for momentum variation in torqueless tokamak
+plasmas \cite{Garofalo:2009p4775,Nave:2010p4812} or for mitigation
+of power loads on the divertor~\cite{Evans:2006p2554}. Among  all
+of these tools, it is worth mentioning Resonant and Non Resonant
+Magnetic perturbations for ELM control, which are presently
+installed in all of the major
+tokamaks~\cite{Evans:2006p2554,Suttrop:2011bp,Liang:2011ww,Kirk:2010p4626},
+and foreseen also for next generation
+devices~\cite{LoarteIAEAv:2012ui}. These experiments share the
+rationale of the edge ergodization obtained for example in the DED
+experiment at TEXTOR~\cite{Lehnen:2005ir}, and more generally to
+the island divertor concept developed for present and future
+stellarators \cite{0741-3335-44-11-306}.
+
+The edge physics of the improved confinement regime observed in
+high current operations in Reversed Field Pinch (RFP)
+configuration~\cite{Lorenzini:2009p4248}, whose discovery and
+characterization Dr. Vianello has actively contributed, exhibits strong
+analogies with physical phenomena observed in 3D magnetic
+configurations.
+
+In particular in recent years Dr. Vianello focused his attention on
+the interaction between non-axysimmetric magnetic field and flow. It
+has contributed to the observation of the role of magnetic islands in
+determining the flow pattern associated to the MARFE phenomenon
+\cite{Spizzo:2012hw,Spizzo:2010p4796} occurring in high density regime
+in an RFP and more recently to the existence of an helical flow
+pattern velocity, as the result of an ambipolar electric field
+response to a magnetic perturbation in helical Reversed Field Pinches
+\cite{Vianello:2012uh}. The  provided experimental evidences exhibit
+analogies with the RMP experiments,
+suggesting the necessity to correctly consider the spatial phase
+relation between experimental observations and magnetic perturbations
+also in the case of non-axysimmetric tokamak plasmas. Magnetic
+perturbation causes also the modification of pressure profiles, with
+different behavior of density and temperature: as a consequence high-k
+turbulence has been found to be profoundly influenced
+\cite{0741-3335-54-6-065003} and this phenomenon represents the
+present subject of investigation of Dr. Vianello.
+
+\printbibliography[title=Personal publications,notkeyword=others]
+\printbibliography[title=Other Sources, keyword=others]
+
+\end{document}
