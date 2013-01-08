@@ -1,0 +1,189 @@
+%%% LaTeX Template: Article/Thesis/etc. with colored headings and special fonts
+%%%
+%%% Source: http://www.howtotex.com/
+%%% Feel free to distribute this template, but please keep to referal to http://www.howtotex.com/ here.
+%%% February 2011
+
+%%%%% Preamble
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper,margin=2.5cm}
+\usepackage[latin1]{inputenc}							% Input encoding
+\usepackage{amsmath}									% Math
+\usepackage{fontspec,lipsum}
+\defaultfontfeatures{Ligatures=TeX}
+\setromanfont{Minion Pro}
+\setsansfont{Myriad Pro}
+\usepackage{xcolor}
+\definecolor{bl}{rgb}{0.0,0.2,0.6} 
+
+\usepackage[style=phys,biblabel=brackets,backend=biber]{biblatex}
+\addbibresource{../utils/biblio.bib}
+\addbibresource{../utils/others.bib}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+
+\usepackage{sectsty}
+\usepackage[compact]{titlesec} 
+\allsectionsfont{\color{bl}\scshape\selectfont}
+
+%%%%% Definitions
+% Define a new command that prints the title only
+\makeatletter							% Begin definition
+\def\printtitle{%						% Define command: \printtitle
+    {\color{bl} \centering \huge \sc \textbf{\@title}\par}}		% Typesetting
+\makeatother							% End definition
+
+\title{Research Pogram of Dr. Vianello}
+
+% Define a new command that prints the author(s) only
+\makeatletter							% Begin definition
+\def\printauthor{%					% Define command: \printauthor
+    {\centering \small \@author}}				% Typesetting
+\makeatother							% End definition
+
+\author{%
+   \vspace{10pt}
+	N. Vianello\\
+	\vspace{20pt}
+	}
+
+% Custom headers and footers
+\usepackage{fancyhdr}
+	\pagestyle{fancy}					% Enabling the custom headers/footers
+\usepackage{lastpage}	
+	% Header (empty)
+	\lhead{}
+	\chead{}
+	\rhead{}
+	% Footer (you may change this to your own needs)
+	\lfoot{\footnotesize Dr. Vianello Research Plan}
+	\cfoot{}
+	\rfoot{\footnotesize page \thepage\ of \pageref{LastPage}}	% "Page 1 of 2"
+	\renewcommand{\headrulewidth}{0.0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+
+% Change the abstract environment
+\usepackage[runin]{abstract}			% runin option for a run-in title
+\setlength\absleftindent{30pt}		% left margin
+\setlength\absrightindent{30pt}		% right margin
+\abslabeldelim{\quad}						% 
+\setlength{\abstitleskip}{-10pt}
+\renewcommand{\abstractname}{}
+\renewcommand{\abstracttextfont}{\color{bl} \small \slshape}	% slanted text
+
+
+%%% Start of the document
+\begin{document}
+%%% Top of the page: Author, Title and Abstact
+\printtitle 
+
+\printauthor
+\subsubsection*{3D Physics in present and future Fusion devices}
+3D effects are becoming extremely important in the fusion research. 
+Also intrinsic two-dimensional configurations as Tokamaks are now
+fostering research 
+in the application of the magnetic perturbation, which naturally breaks
+the symmetry of the configuration, 
+in particular with the aim of controlling plasma instabilities such as
+the Edge Localized Mode. 
+The possibility of controlling these instabilities is mandatory for
+the future devices. 
+A bunch of work remains to be done to understand the consequences of
+3D fields 
+and magnetic perturbation in confined plasma. 
+Planned research foresees the study of effects of 3D field in:
+\begin{description}
+\item[(a) Profiles: ] Detailed experimental characterization of
+  edge and SOL modification caused by magnetic perturbations in fusion
+  devices including tokamaks, reversed field pinches and
+  stellarators (international collaborations are foreseen). Emphasis will
+  be devoted to the determination of the reasons causing the
+  density pump-out observed in varios experiments highlighting the
+  enhanced transport channel and the role of high-$k$ turbulence in
+  determining this process. This require the analysis of the interaction
+  between perturbed magnetic surfaces and plasma turbulence.
+\item[(b) Edge flow:] Edge flow and edge radial electric field are 
+  found to be modified by magnetic perturbation. Helical radial
+  electric field arises as a consequence of ambipolar response. Still
+  lack of knowledge exists on the spatial relationship between applied
+  perturbation and ambipolar response and the role of
+  collisionality/viscosity or plasma density in determining the spatial phase
+  relation between vector and scalar potential remains unknown. 
+\item[(c) Core region: ]Proposed activity regards the role of 3D fields
+in controlling MHD modes 
+as RWM or tearing instabilities or tailoring of sawtooth activity, and in the effect of 3D fields in the
+modification of 
+core rotation of both plasma and MHD modes. Indeed these effects are
+mandatory in order to understand 
+the possibility to modify flow profile by opportunely governing
+magnetic perturbation by exploring 
+the role of Neoclassical Toroidal Viscosity and electromagnetic torque
+in the plasma. 
+This research line may be exploited using data obtained both in Reversed Field Pinches and in Tokamaks
+\item[(d) Energetic particles: ]ITER and future devices will operate with a large population of fast particles, 
+both as fusion reaction products, or because of high energy Neutral
+Beam Injection 
+(ITER Neutral Beam Injector will operate with a maximum energy of 1
+MeV). 
+Thus research on Energetic Particle driven modes are mandatory in
+order to anticipate the challenges future magnetic devices.
+Research has to be pursued by means of theoretical and numerical
+models (turbulence spreading of energetic particles, energetic
+particle modes stability as examples) 
+but also experimentally. 
+For this porpoise experiments may be considered in small 
+devices with fast ion sources (NBI or ICRH) or in general  with detailed studies of the interaction between MHD modes and fast
+particles. Tools for controlling MHD modes or modification of profiles
+through non-axysimmetric magnetic field can be considered for
+perturbative studies of energetic particle redistribution.
+  
+\end{description}
+
+As an ancillary subject a research activity on 
+\emph{Spontaneous and induced rotation} is proposed. 
+A strong effort has been devoted by the fusion   community to the
+comprehension of 
+the spontaneous rotation, both toroidal and poloidal rotation,
+observed in fusion relevant plasmas. 
+Understanding the physics underlying this topic is fundamental, as spontaneous
+rotation would help in the control of 
+dangerous MHD instabilities in future devices. Various theories have
+been proposed including theories 
+regarding the role of turbulence and residual stress or Up-down
+asymmetry. Furthermore little knowledge 
+exists on the mechanism governing momentum transport from the core to
+the edge of toroidal plasmas. 
+This task may be studied using perturbative approach such as biased
+limiter or divertor plates, 
+pulsed NBI momentum transfer or varying edge magnetic ripple (which
+has been shown to produce 
+effects on spontaneous rotation) or applying Resonant and
+non-resonanant magnetic perturbation. On this topic experimental
+effort should be devoted on studying flow generation around magnetic
+islands and difference arising from the application of resonant and
+non-resonant magnetic perturbation. Momentum transfer may be studied
+also using spontaneous 
+effects such as Relaxation events in Reversed Field Pinches or
+sawtooth crashes exploring
+in this way the effect 
+of electromagnetic torque on plasma rotation.
+\vspace{0.5cm}
+
+All the proposed activity
+share commonalities among all the major magnetic configuration but also with different scientific communities in
+particular with astrophysical plasmas: indeed interaction between
+magnetic islands and magnetic field with energetic particles, or
+modification of high-$k$ turbulence by means of magnetic field are all
+topics with great resonances also in astrophysical
+science. Beneficial results can be obtained by strengthening
+collaborations within all these communities and additional benefits could
+result from the already established collaborations of the candidate
+also with solar physics
+groups.
+
+
+% \printbibliography[title=Personal publications,notkeyword=others]
+% \printbibliography[title=Other Sources, keyword=others]
+
+\end{document}
