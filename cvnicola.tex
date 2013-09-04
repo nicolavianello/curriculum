@@ -1,0 +1,75 @@
+%!TEX TS-program = xelatex
+\documentclass[]{nicola-cv}
+\addbibresource{utils/biblio.bib}
+\usepackage{ltxcmds}
+\makeatletter
+\newcommand{\IfClassLoaded}[2]{\ltx@ifclassloaded{#1}{#2}{}}
+\makeatother
+\usepackage{etoolbox}
+\newtoggle{nicolacv}
+\toggletrue{nicolacv}
+
+
+
+\begin{document}
+\header{Nicola}{Vianello}
+       {curriculum vitae}
+
+
+% In the aside, each new line forces a line break
+\begin{aside}
+  \section{Home}
+    via Isonzo 70
+    35143 Padova
+    Italy
+    ~
+    \href{mailto:nicola.vianello@gmail.com}{nicola.vianello@gmail.com}
+  \section{Work}
+    c/o Consorzio RFX
+    Euratom/ENEA Association
+    Corso Stati Uniti 4
+    35127 Padova
+    Italy
+    ~
+    \href{mailto:nicola.vianello@igi.cnr.it}{nicola.vianello@igi.cnr.it}
+\end{aside}
+
+\section{interests}
+
+Plasma physics, non-linear dynamics, turbulence, Fusion energy,
+Astrophysical plasmas, dynamics in social system
+
+\input{english/education-en}
+
+\input{english/employment-en}
+
+\input{english/further-experience-en}
+
+\input{english/conferences-en}
+
+\input{english/competion-en}
+
+\input{english/skills-en}
+
+\input{english/responsabilities-en}
+
+
+% \begin{publications}
+\section{Publications}
+\nocite{*}
+I have authored a total number of \printbibliography[env=counter,
+ heading=counter, type=article] Articles in peer reviewed journal,  
+ \printbibliography[env=counter, heading=counter, type=inproceedings]
+ conference proceedings and personally presented
+ \printbibliography[env=counter, heading=counter, type=misc] oral
+ contribution. \\
+h-index factor: 18 according to ISI Web of Knowledge (last update \today)
+
+\printbibliography[type=article, title={article in peer-review journal}, heading=subbibliography, prefixnumbers={A}]
+\printbibliography[type=inproceedings, title={National and
+   international conference}, heading=subbibliography, prefixnumbers={B}]
+\printbibliography[type=misc, title={First author oral contribution}, heading=subbibliography, prefixnumbers={C}]
+\printbibliography[type=report, title={Report}, heading=subbibliography, prefixnumbers={D}]
+
+
+\end{document}
