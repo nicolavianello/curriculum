@@ -52,15 +52,22 @@ May 2003 - July 20009 : Researcher (6th-7th) level at  Consorzio RFX, Associazio
 - Author of  79 publications  on international journals (h-index at 31 January 2013:18)
 - Author of more than 70 contributes in conferences proceedings (16 oral presentations)
 * Main results
-I’ve been involved in fusion plasma science since my M.Sci. thesis in Physics in 1999. During these 13 years I’ve tried to expand as much as possible my personal research skills focusing in particular on collection, anal- ysis, interpretation and modeling of experimental data collected in fusion oriented experiments (Reversed Field Pinches, Tokamaks and Stellarators), with particular emphasis on the comparison with theoretical and numerical results. Main research subjects may be summarized as follow:
+I’ve been involved in fusion plasma science since my M.Sci. thesis in Physics in 1999. During these 13 years
+I’ve tried to expand as much as possible my personal research skills focusing in particular on collection,
+analysis, interpretation and modeling of experimental data collected in fusion oriented experiments
+(Reversed Field Pinches, Tokamaks and Stellarators), with particular emphasis on the comparison with theoretical and numerical results.
+Main research subjects may be summarized as follow:
+
 (a) Electromagnetic turbulence induced transport:, with emphasis on anomalous transport studies induced by different source of turbulence: electrostatic as Dri-induced or interchange induced transport, or electromagnetic including the role of magnetic 􏰆utter 􏰆uxes in the mechanism of particle and energy losses
 (b) Statistical analysis of plasma turbulence: the topic allowed me to get confident with advanced sta-tistical tool (as Wavelet Transforms, Local Intermittency Measurements, Waiting Time distribution) and with dynamical system model as Self-Organized Criticality (SOC) systems, shell-models
 (c) Blobs and ELM 􏰅laments: non linear coherent structures arising as a non-linear evolution of plasma instabilities have been experimentally investigated. e research includes studies on the generation and evolution of these structures including their parallel dynamics with emphasis on turbulent blobs and ELM 􏰅laments
 (d) Sheared flow generation and non linear interaction between turbulence and sheared 􏰆ows including experimental investigation of the role of Maxwell and Reynolds stress in the momentum generation of edge 􏰆ow in Reversed Field Pinches
-(e) Numerical modeling of electromagnetic plasma turbulence using 􏰆uid approach
-(f) Magnetic topology and its relation with plasma 􏰆flow, with emphasis on the effect of non-
-axysimmetric magnetic field perturbation on kinetic properties of the plasma, as plasma flow, ambipolar electric 􏰅field and Plasma Wall Interaction
-(g) Beam plasma interaction with emphasis on Alfvén instabilities, Energetic Particle Driven instabilities, and turbulent transport of energetic ions
+(e) Numerical modeling of electromagnetic plasma turbulence using fluid approach
+(f) Magnetic topology and its relation with plasma flow, with emphasis on the effect of non-
+axysimmetric magnetic field perturbation on kinetic properties of the plasma, as plasma flow, ambipolar electric
+field and Plasma Wall Interaction
+(g) Beam plasma interaction with emphasis on Alfvén instabilities, Energetic Particle Driven instabilities,
+and turbulent transport of energetic ions
 Among the results the following should be highlighted:
 (i) First experimental proof of non applicability of Self Organized Criticality paradigm to edge plasma turbulence [PRL 2001, PRL2011]
 (ii) First experimental evidence of non-linear generation of edge 􏰆flow in Reversed Field Pinches through Reynolds stress mechanism [PRL 2005]
