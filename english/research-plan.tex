@@ -1,0 +1,85 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper,margin=2.5cm}
+\usepackage{amsmath}									% Math
+% ----------
+% font used
+\usepackage{fontspec,lipsum, xltxtra, xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
+\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light} % same font used in
+% ----------
+% color code
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{lg}{gray}{0.85} % used for hrules
+\definecolor{darkBlue}{RGB}{39, 64, 139} % used in headings
+\definecolor{bl}{rgb}{0.0,0.2,0.6} % alternative blue
+% ----------
+%   Biblio
+\usepackage[style=phys,biblabel=brackets,backend=biber]{biblatex}
+\addbibresource{../utils/biblio.bib}
+\addbibresource{../utils/others.bib}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+% ----------
+% Sections
+\usepackage{sectsty}
+\usepackage[compact]{titlesec} 
+\titleformat{\section}[block]{\normalfont\Large\bfseries\color{darkBlue}}{\thesection}{1em}{}[\vspace{-6pt}\textcolor{lg}{\titlerule}]
+\titleformat{\subsection}[block]{\normalfont\bfseries\color{darkBlue}}{\thesection}{1em}{}
+
+
+% ----------
+%  header
+\usepackage{fancyhdr}
+	\pagestyle{fancy}					% Enabling the custom headers/footers
+\usepackage{lastpage}	
+	% Header (empty)
+	\lhead{}
+	\chead{}
+	\rhead{}
+	% Footer (you may change this to your own needs)
+	\lfoot{\footnotesize \textcolor{Gray}{\textit{Dr. Vianello Research Plan}}}
+	\cfoot{}
+	\rfoot{\footnotesize \textcolor{Gray}{\textit{page \thepage\ of \pageref{LastPage}}}}	% "Page 1 of 2"
+	\renewcommand{\headrulewidth}{0.0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+
+% ----------
+% Change the abstract environment
+\usepackage[runin]{abstract}			% runin option for a run-in title
+\setlength\absleftindent{30pt}		% left margin
+\setlength\absrightindent{30pt}		% right margin
+\abslabeldelim{\quad}						% 
+\setlength{\abstitleskip}{-10pt}
+\renewcommand{\abstractname}{}
+\renewcommand{\abstracttextfont}{\color{bl} \small \slshape}	% slanted text
+% ----------
+%   Lettrine
+\usepackage{lettrine}
+%%% Start of the document
+\begin{document}
+\begin{flushright}
+\textcolor{darkBlue}{ \Huge
+\lettrine[lines=3,findent=-1pt, loversize = -0.42,
+lraise=0.6]{N}{icola Vianello}}\\[2pt]
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Swiss Plasma Center EPFL}}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Batiment 13, CH-1025, Lausanne }}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{+41 216934308 $\cdot$  nicola.vianello@epfl.ch }}
+\end{flushright}
+% now the title
+% ----------
+%   Title 
+\begin{flushleft} 
+\textcolor{darkBlue}{ \Huge
+\lettrine[lines=2,findent=-1pt, loversize = -0.42,
+lraise=0.6]{R}{esearch Plan}}
+\end{flushleft}
+
+
+\section*{Prova}
+bla bla bla
+\subsection*{prova}
+\end{document}
