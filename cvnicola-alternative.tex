@@ -5,6 +5,10 @@
 
 
 \documentclass[10pt, a4paper]{tabcv}
+
+\usepackage{datenumber, fp}
+% to compute the date difference from M.Sci. degree
+% biblio sources
 \addbibresource{utils/biblio.bib}
 % this is choosing between files
 \usepackage{etoolbox}
@@ -47,6 +51,14 @@
 
 \begin{document}
 
+\newcounter{dateone}%
+\newcounter{datetwo}%
+\setmydatenumber{dateone}{1999}{01}{01}%
+\setmydatenumber{datetwo}{\the\year}{\the\month}{\the\day}%
+\FPsub\result{\thedatetwo}{\thedateone}
+\FPdiv\mydegree{\result}{365.2425}
+%\mydegree
+
 % if there are publications to be added
 % comment out otherwise
 %\nobibliography{utils/biblio}
@@ -74,13 +86,13 @@ lraise=0.6]{N}{icola Vianello}}\\[2pt]
 \input{english/invited-lectures}
 \input{english/competion-en}
 \input{english/skills-en}
-\input{english/languages-en}
+%\input{english/languages-en}
 \input{english/responsabilities-en}
 \input{english/teaching-en}
 \input{english/research-en}
 %\input{english/collaborations}
-\input{english/other-en}
-\input{english/referees-en}
 \input{english/publication-alternative-curriculum}
+\input{english/referees-en}
+\input{english/other-en}
 \input{english/declaration-en}
 \end{document}
