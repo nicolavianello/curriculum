@@ -132,6 +132,10 @@
 % ----------
 %   Lettrine
 \usepackage{lettrine}
+% ----------
+% enumitem
+\usepackage{enumitem}
+
 %%% Start of the document
 \begin{document}
 \begin{flushright}
@@ -160,8 +164,7 @@ spatio-temporal scales
 \cite{Kadomtsev:1992us,Sornette:2006dt}. It is known since a lot of
 time that simplified diffusion paradigm can't correctly describe the
 transport of energy, particles and momentum and a different
-description of this dynamical system, generally found close to
-marginal stability needs to be used. Proper description of plasma
+description is mandatory for this dynamical system. Proper description of plasma
 dynamics require consequently to disentangle the role played by
 fluctuations, which are found to emerge at all spatial and temporal
 scales. My personal research activity has been indeed devoted to the analysis,
@@ -191,28 +194,27 @@ description of a non-deterministic process is based on a statistical
 approach.  The Kolmogorov hypothesis is strongly based on the
 assumption of self-similarity, but plasma turbulence, as well as turbulence observations from hydrodynamic to
 astrophysics till econophysics \cite{Sornette:2006dt}, has been proved
-to exhibit an high degree of \emph{intermittency}. This has been
-clearly proved in variety of experiment
-\cite{Antoni:2001p662,Vianello:2002p3579}, and has been successfully compared
+to exhibit an high degree of \emph{intermittency}. I have contributing
+to proving this in variety of experiments
+\cite{Antoni:2001p662,Vianello:2002p3579}, with a successful comparison 
 with solar wind and atmospheric turbulence data
 \cite{Carbone:2002p2809}, providing me a wider comprehension of the
 mechanism and advanced investigation tools used also in other research
 field. Stimulated from the observation of this strong intermittent
 character I've been focused my effort in the characterization and
-comprehension of those strong fluctuations (localized both in time and
-$k_{\perp}$ spectra) responsible for the departure of self-similarity
-and the multifractal nature of plasma turbulence
-\cite{Bohr:1998fn}. These eddies have been characterized in a variety
-of different devices and magnetic configuration
+comprehension of those fluctuations (localized both in time and
+$k_{\perp}$ spectra) responsible for the multifractal nature of plasma turbulence
+\cite{Bohr:1998fn}. I've worked on the experimental characterization
+of these eddies in a variety
+of different devices and magnetic configurations
 \cite{Spolaore:2009p4115,Vianello:2010p4670,Furno:2011cs,Spolaore:2015ij},
 they are localized pressure perturbation with a vortex-like pattern in
 the plane perpendicular to the guiding field \cite{Antoni:2006p3585},
-extended along the direction of the guiding magnetic field (indeed
-they are also dubbed as \emph{filaments})
+extended along the direction of the guiding magnetic field (they are also dubbed as \emph{filaments})
 and with an associated parallel current
 \cite{Spolaore:2009p4115,Vianello:2010p4670}. These eddies form as a
 result of non-linear evolution of plasma instabilities, and among
-various one of the possible mechanism has been identified as a result
+various,  one of the possible mechanism has been identified as a result
 of the coupling between Drift Waves (DW) and Kinetic Alfv{\'e}n Waves
 (KAW) \cite{Vianello:2010p4670}, in analogy with what observed in the
 magnetosphere \cite{Martines:2009p4483,Sundkvist:2005is}. Extending
@@ -221,7 +223,7 @@ between the enhancement of convective transport caused by these
 filaments (depending on the parallel closure along the field line) and
 the modification of the density gradient of the equatorial iogenic
 plasma torus in the Jovian magnetosphere \cite{Frank:2002eu} has been
-observed \cite{carralero:prl2015}. This testify that investigation on
+experimentally proved \cite{carralero:prl2015}. This testify that investigation on
 plasma fluctuations as observed in fusion plasmas have actually a
 larger impact and deep analogy with other disciplines. 
 Expertise in
@@ -231,9 +233,9 @@ filaments providing for the first time an experimental direct estimation of the
 current density associated to a type-I filament
 \cite{PhysRevLett.106.125002,Naulin:2011im,Muller:2011kj,Spolaore:2015tk}.
 
-Multi-scale dynamics has been involved also in the process of
+Multi-scale dynamics is involved also in the process of
 turbulent generated flow. It is indeed well known that Turbulence, and
-in particular DWT can spontaneously generate patterns [zonal flows and
+in particular Drift Wave Turbulence (DWT) can spontaneously generate patterns [zonal flows and
 currents/fields, generally zonal structures (ZS)] 
 on scales that are typically larger than the perpendicular (w.r.t. the
 equilibrium magnetic field $B_0$) 
@@ -243,10 +245,11 @@ still shorter than the equilibrium nonuniformity scale length
 The emergence of this sheared ZF arises due spatial anisotropy of
 fluctuation coupling, through a mechanism known in the fluid
 turbulence literature as the turbulent Reynolds stress
-\cite{Tynan:2009p4426}. This process, which can be interpreted also as a
-non-linear energy transfer process, has been intensively studied
-\cite{Vianello:2005p1976,Vianello:2006p1149} and is recently been
-considered to explain the bifurcation to enanched confinement regimes
+\cite{Tynan:2009p4426}. I've deeply investigated this process \cite{Vianello:2005p1976,Vianello:2006p1149},
+which can be interpreted also as a
+non-linear energy transfer process: it is worth noting that it is one
+of the invoked mechanism 
+to explain the bifurcation to enanched confinement regimes
 (H-modes) in tokamaks \cite{Schmitz:2012hwa}. 
 
 Apart from the aforementioned multi-scale process regarding turbulence
@@ -257,7 +260,7 @@ scientific community. This is motivated
 by the fact that EPs are expected to dominate the power balance in
 future burning fusion plasmas \cite{Zonca:2015hs} and by the necessity
 to correctly predict current profile redistribution due to the
-injection of Neutral Beams in future devices like ITER> 
+injection of Neutral Beams in future devices like ITER. 
 
 The interaction between fast ion and background turbulence have to be
 considered from a dual perspective. 
@@ -266,30 +269,34 @@ redistribution of fast ion has to be addressed. From the theoretical
 point of view as a first approximation fast ions should not be
 affected by small scale fluctuations due to their large gyroradius
 through a process know as \emph{orbit averaging}. Recent numerical and
-theoretical observation \cite{Albergante:2011bj} actually revealed
+theoretical observation \cite{Albergante:2011bj} actually reveal
 that the influence of electrostatic turbulence on fast ion depends on the ratio
-$E/T_e$ basically,  and in some case can be considered as one of the causes of
+$E/T_e$: in some case it has been indicated as one of the causes of
 the observed experimental observation of fast broadening of current profile after
 off-axis injection of Neutral Beam
-\cite{Heidbrink:2009wv,Baranov:2009p4033}. Indeed concerns for
+\cite{Heidbrink:2009wv,Baranov:2009p4033}. Concerns exist for
 foreseen scenario of off-axis N-NBI injection on ITER at lower power
-has arisen \cite{Albergante:2011bj}. On the other hand Energetic
+has arisen \cite{Albergante:2011bj}. 
+
+On the other hand Energetic
 particles can provide the free energy source for Shear Alfv{\'e}n
 Waves (SAW) and drift-Alfv{\'e}n waves (DAW) excitation on the micro and
 meso-scales \cite{Zonca:2015hs} with the inclusion of even shorter
 wavelength through a process of mode conversion of SAW/DAW to kinetic
 Alfv{\'e}n waves. All of these instabilities could generate Zonal-like
 structures at intermediate scales which interact with the original
-fluctuations in a complex cross-scale self-regulated process. On the
-other hand Energetic Particle induced Zonal Structure, as those for
+fluctuations in a complex cross-scale self-regulated process. 
+Energetic Particle induced Zonal Structure, as those for
 example of the Energetic Particle Geodesic Acoustic Modes (EGAMS)
 \cite{Zarzoso:2013kw,Nazikian:2008hk,Ido:2011gy} have a complicated
 interaction with turbulent eddies induced by thermal ion
 instabilities: this interaction could provide enhance plasma transport
 and it is thus obvious that in view of burning plasmas with a
 substantial fraction of energetic particles these mechanism should be
-addressed. A variety of questions remain presently among the others:
-\begin{description}
+addressed. This topic is an hot issue in the fusion community but
+there are a variety of open issues which need to be addressed,
+particularly from the experimental point of view:
+\begin{description}[labelindent=0pt, labelsep*=0.3em, leftmargin=!, itemsep=0.02ex]
 \item[(i)] How fast particle density is modified in presence of
   different type of fluctuations? Thus by modifying from electron to
   ion dominated turbulence is anomalous fast particle transport different?
@@ -310,17 +317,17 @@ Injector with energy up to 30 kEV and delivered power up to 1 MW. This
 new system, coupled with the forthcoming upgrade of the Electron
 Cyclotron Resonant Heating system will allow to reach unexplored
 scenario for this machine, with high values of normalized pressure $\beta$ and a wide range of
-$T_e/T_i$ including $T_e\sim T_I\i$ and with a significant population
+$T_e/T_i$ including $T_e\sim T_i\i$ and with a significant population
 of fast ion. It appears clearly that the TCV machine could be the
 ideal test-bed for the proposed investigation of multi-scale and
 energetic particle physics, but this require an aggressive program on
-experimental side and this is the subject of the present proposal. 
+experimental side. This represents the main subject of the present proposal. 
 So far indeed the tokamak is equipped with a
 Compact Neutral Particle Analyzer which can be used for the
 investigation of fast particles. Actually to experimentally address
 this topic new diagnostics should be installed. Among them we list the
-following, together with possible collaboration international to be activated or reinforced:
-\begin{description}
+following, together with possible international collaboration to be activated or reinforced:
+\begin{description}[labelindent=0pt, labelsep*=0.4em, leftmargin=!, itemsep=0.02ex]
 \item[FIDA:] \emph{Fast Ion D$_{\alpha}$ diagnostic} is based on the
   same principle of Charge eXchange Recombination Spectroscopy,
   considering the emission from $n=3$ to $n=2$ Balmer series, combined
@@ -328,7 +335,7 @@ following, together with possible collaboration international to be activated or
   emission from other source of radiation. Presently this diagnostic
   is under consideration for a fast-track implementation of
   TCV. Possible collaboration to be activated University of
-  California, Irvine and Princeton Plasma Physics Laboratory
+  California, Irvine, Princeton Plasma Physics Laboratory, Max Planck Instit{\"u}t f{\"u}r Plasmaphysik
 \item[FILD:] \emph{Fast Ion Loss Diagnostic} can be described as a
   mass-spectrometer for Fast Ion providing discrimination of Energy
   (through gyro-orbit evaluation) and pitch angle of the collected
@@ -336,22 +343,25 @@ following, together with possible collaboration international to be activated or
   photomultiplier which can give information on fast-ion fluxes at
   higher temporal resolution. Collaboration to be activated, Max
   Planck Instit{\"u}t f{\"u}r Plasmaphysik
-\item[DLP:] \emph{directional langmuir probe} can be considered as an
-  extension of the Mach probe for flow measurement and can be used in
-  presence of population of fast ion induced by tangential beam
-\item[Neutron Camera:] Neutron Camera
-  \textcolor{red}{aggiungi}. Possible collaboration to be activated
-  University of Uppsala
 \item[Ion Energy Analyzer probe:] This type of probe is presently
   under development in the framework of a European collaboration and
   it will combined with fast magnetic measurements giving the
-  possility for local investigation of the relation between magnetic
+  possibility for local investigation of the relation between magnetic
   fluctuations and fast ion fluxes
+\item[DLP:] \emph{directional langmuir probe} can be considered as an
+  extension of the Mach probe for flow measurement and can be used in
+  presence of population of fast ion induced by tangential beam. This
+  diagnostic is relatively easy and can be rapidly implemented
+\item[Neutron Camera:] Collimated Neutron Flux Camera for the
+  measurement of the 2.45 MeV neutron emission from the D-D fusion
+  reaction can be installed. They can provide spatial and time
+  resolved volume integrated neutron emissivity in the presence of NBI
+  heated plasmas \cite{Cecconello:2014hw}. Possible collaboration to be activated
+  University of Uppsala
 \end{description}
 To complement fast ion investigation a diagnostic for the
 determination of the current profile is mandatory, and in this
-framework the implementation of a Motional Stark Effect or of a
-\textcolor{red}{polarimeter} (?) is suggested.
+framework the implementation of a Motional Stark Effect is suggested.
 The development, installation and exploitation of each of this
 diagnostic can be performed in the cycle of a PhD thesis, giving the
 student the possibility to gain deep insight on the experiment, and
@@ -368,10 +378,12 @@ the investigation of the fast ion dynamics but the proposed
 experimental program could provide the indispensable results to test
 and validate theoretical models. On this,  development of synthetic
 diagnostics for proper interpretation of experimental data is foreseen
-and envisage. This could strengthen the collaboration between
+and envisage as well as application of transport paradigm different
+from usual diffusion/convective one (non-diffusive, Levy Statistics
+etc. see for example \cite{Perrone:2013hp,Greco:2003fx}). This could strengthen the collaboration between
 experiment and theory department. 
 
-As a final remark, to highlight the interdiscplinarity of the proposed
+As a final remark, to highlight the Interdisciplinarity of the proposed
 research line it must be noted that fast ion studies on basic
 plasma devices is already ongoing in the basic plasma
 department. Apart from that a program for the establishment of an
@@ -380,10 +392,11 @@ the SPC. In
 within this program the study of energetic ion could represent a
 possible branch considering that ion acceleration is almost ubiquitous in
 astrophysical phenomena,  from reconnection in the planet
-magnetosphere \cite{space-science-review} or solar flares
-\textcolor{red}{cerca citazione} to the fast particle
-ejection in accretion disk \textcolor{red}{cerca citazione} or
-accretion flows \textcolor{red}{cerca citazione}. Thus
+magnetosphere \cite{space-science-review} to shock waves driven
+outward by Coronal Mass Ejections (CMEs), and are observed because of
+termination shock at the outer edge of heliospheric cavity
+\cite{Reames:1999bu}.
+Thus
 technology and expertise developed for the Tokamak experiment could be
 transferred in the view of a cross-fertilization between different
 branches of the plasma physics.
