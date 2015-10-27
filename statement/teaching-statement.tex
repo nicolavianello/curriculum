@@ -1,0 +1,192 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper,margin=2.5cm}
+\usepackage{amsmath}									% Math
+% ----------
+% font used
+\usepackage{fontspec,lipsum, xltxtra, xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
+\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light} % same font used in
+% ----------
+% color code
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{lg}{gray}{0.85} % used for hrules
+\definecolor{darkBlue}{RGB}{39, 64, 139} % used in headings
+\definecolor{bl}{rgb}{0.0,0.2,0.6} % alternative blue
+% ----------
+%   Biblio
+\usepackage[normalem]{ulem}
+\usepackage[sorting=ynt,style=numeric,defernumbers=true,maxnames=300,firstinits=true,uniquename=init,backend=biber,arxiv=abs, isbn=true]{biblatex}
+\addbibresource{../utils/biblio.bib}
+\addbibresource{../utils/others.bib}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
+\DeclareFieldFormat[article]{volume}{\textbf{#1}}
+\DeclareNameAlias{sortname}{first-last}
+\DeclareFieldFormat{date}{(#1)}
+\renewcommand*{\newunitpunct}{\addcomma\space}
+% Don't use "In:" in bibliography. Omit urls from journal articles.
+% macro for article
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor}%
+  \setunit{\labelnamepunct}\nopunct
+{ \addfontfeature{Color=lightgray}\itshape%
+  \usebibmacro{title}
+}
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{journal+issuetitle}%
+  \setunit{\bibpagespunct}%
+  \printfield{pages}
+  \newunit\newblock
+  \usebibmacro{date}
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \usebibmacro{finentry}}
+% Remove dot between volume and number in journal articles.
+\renewbibmacro*{journal+issuetitle}{%
+  \usebibmacro{journal}%
+  \setunit*{\addspace}%
+  \iffieldundef{series}
+    {}
+    {\newunit
+     \printfield{series}%
+     \setunit{\addspace}}%
+  \printfield{volume}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}%
+  \newunit\newblock
+  \usebibmacro{issue}%
+  \newunit}
+
+% added a trick to underline my surname
+\renewbibmacro*{name:first-last}[4]{%
+  \usebibmacro{name:delim}{#2#3#1}%
+  \usebibmacro{name:hook}{#2#3#1}%
+  \ifthenelse{\equal{#1}{Vianello}}% matches last name against YourLastName
+    {
+      \uline{% wrapped with \uline
+      \ifblank{#2}{}{\mkbibnamefirst{#2}\isdot\bibnamedelimd}%
+      \ifblank{#3}{}{%
+        \mkbibnameprefix{#3}\isdot%
+        \ifpunctmark{'}%
+          {}%
+          {\ifuseprefix{\bibnamedelimc}{\bibnamedelimd}}}%
+      \mkbibnamelast{#1}\isdot%
+      \ifblank{#4}{}{\bibnamedelimd\mkbibnameaffix{#4}\isdot}}}%
+    {% original
+      \ifblank{#2}{}{\mkbibnamefirst{#2}\isdot\bibnamedelimd}%
+      \ifblank{#3}{}{%
+        \mkbibnameprefix{#3}\isdot%
+        \ifpunctmark{'}%
+          {}%
+          {\ifuseprefix{\bibnamedelimc}{\bibnamedelimd}}}%
+      \mkbibnamelast{#1}\isdot%
+      \ifblank{#4}{}{\bibnamedelimd\mkbibnameaffix{#4}\isdot}}}
+
+\makeatletter
+
+% ----------
+% Sections
+\usepackage{sectsty}
+\usepackage[compact]{titlesec} 
+\titleformat{\section}[block]{\normalfont\Large\color{darkBlue}}{\thesection}{1em}{}[\vspace{-6pt}\textcolor{lg}{\titlerule}]
+\titleformat{\subsection}[block]{\normalfont\color{darkBlue}}{\thesection}{1em}{}
+
+
+% ----------
+%  header
+\usepackage{fancyhdr}
+	\pagestyle{fancy}					% Enabling the custom headers/footers
+\usepackage{lastpage}	
+	% Header (empty)
+	\lhead{}
+	\chead{}
+	\rhead{}
+	% Footer (you may change this to your own needs)
+	\lfoot{\footnotesize \textcolor{Gray}{\textit{Dr. Vianello Teaching Statement}}}
+	\cfoot{}
+	\rfoot{\footnotesize \textcolor{Gray}{\textit{page \thepage\ of \pageref{LastPage}}}}	% "Page 1 of 2"
+	\renewcommand{\headrulewidth}{0.0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+
+% ----------
+% Change the abstract environment
+\usepackage[runin]{abstract}			% runin option for a run-in title
+\setlength\absleftindent{30pt}		% left margin
+\setlength\absrightindent{30pt}		% right margin
+\abslabeldelim{\quad}						% 
+\setlength{\abstitleskip}{-10pt}
+\renewcommand{\abstractname}{}
+\renewcommand{\abstracttextfont}{\color{bl} \small \slshape}	% slanted text
+% ----------
+%   Lettrine
+\usepackage{lettrine}
+% ----------
+% enumitem
+\usepackage{enumitem}
+
+%%% Start of the document
+\begin{document}
+\begin{flushright}
+\textcolor{darkBlue}{ \Huge
+\lettrine[lines=3,findent=-1pt, loversize = -0.42,
+lraise=0.6]{N}{icola Vianello}}\\[2pt]
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Swiss Plasma Center EPFL}}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Batiment 13, CH-1025, Lausanne }}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{+41 216934308 $\cdot$  nicola.vianello@epfl.ch }}
+\end{flushright}
+% now the title
+% ----------
+%   Title 
+\begin{flushleft} 
+\textcolor{darkBlue}{ \Huge
+\lettrine[lines=2,findent=-1pt, loversize = -0.42,
+lraise=0.6]{T}{eaching statement}} 
+\end{flushleft}
+I strongly believe that teaching is a foundamental part for an
+academic career. As a physicist, I really enjoy explaining physics
+concept and I receive a great intellectual pleasure whenever I observe
+students understand them. I also strongly believe that teaching must
+go beyond imparting facts which is why I encourage the development of
+critical thinking analysis and synthesis skills. This can be reached
+actually through an adaptive process according to the students
+reaction to the course. 
+
+A challenging task as an educator is to keep lively the attention of
+the students. This can be reached through well-organized engaging
+lecture which possess a core topic clearly stated since the beginning
+of the class. This topic has to be motivated at various levels: 
+for the course itself, for physics more broadly intended, and, crucially, for current research.
+We need to make the students aware
+ that even basic physics offer method which is currently in use in
+ actual research. I also believe that understanding of a particular
+issue can be easier by teaching also a bit of 
+of the history and steps which have lead to the present understanding
+of the discussed topic. \emph{Learning from the past} indeed can provide the
+students with a real practical example of a successful scientific
+and critical method. 
+
+Interaction with the students is vital for a teacher and provide the
+indispensable energy to keep motivated the teacher
+himself. Interaction can occur at various level. 
+With a
+single student, or small group,  which comes with question and
+clarification I try to push him/them to analyze the problem again, offering
+the solution step by step, or even better posing bite-sized questions
+they can answer so that at the end the logically come to the right
+conclusion. Whenever you deal with large class instead understanding
+the real comprehension of the topic, apart from resolving textbook
+exercise is more complex. Up to now I always taught to relative small
+groups up to 30-40 students  
+\end{document}
