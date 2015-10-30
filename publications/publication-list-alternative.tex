@@ -4,8 +4,7 @@
 %% template used in the other for of curriculum
 
 
-\documentclass[10pt, a4paper]{tabcv}
-\addbibresource{../utils/biblio.bib}
+\documentclass[10pt, a4paper]{nicola-cv-alternative}
 % this is choosing between files
 \usepackage{etoolbox}
 \newtoggle{nicolacv}
@@ -22,6 +21,7 @@
 % packages to make header
 \usepackage{lettrine}
 \usepackage{graphicx} % for resizebox
+\addbibresource{~/Dropbox/Work/Curriculum/utils/biblio.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%  To highlight author name in publications sections   %%%%%%
@@ -83,5 +83,5 @@ h-index factor: 21 according to ISI Web of Knowledge (last update \today)
 \printbibliography[type=misc, title={First author oral contribution}, heading=subbibliography, prefixnumbers={C}, resetnumbers=true]
 \printbibliography[type=report, title={Report}, heading=subbibliography, prefixnumbers={D}, resetnumbers=true]
 
-\input{english/declaration-en}
+\input{../english/declaration-en-publication-list}
 \end{document}
