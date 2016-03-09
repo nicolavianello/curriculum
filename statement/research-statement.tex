@@ -1,0 +1,424 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\geometry{a4paper,margin=2.5cm}
+\usepackage{amsmath}									% Math
+% ----------
+% font used
+\usepackage{fontspec,lipsum, xltxtra, xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
+\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light} % same font used in
+% ----------
+% color code
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{lg}{gray}{0.85} % used for hrules
+\definecolor{darkBlue}{RGB}{39, 64, 139} % used in headings
+\definecolor{bl}{rgb}{0.0,0.2,0.6} % alternative blue
+% ----------
+%   Biblio
+\usepackage[normalem]{ulem}
+\usepackage[sorting=ynt,style=numeric,defernumbers=true,maxnames=300,firstinits=true,uniquename=init,backend=biber,arxiv=abs, isbn=true]{biblatex}
+\addbibresource{../utils/biblio.bib}
+\addbibresource{../utils/others.bib}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
+\DeclareFieldFormat[article]{pages}{#1}
+\DeclareFieldFormat[inproceedings]{pages}{\lowercase{pp.}#1}
+\DeclareFieldFormat[article]{volume}{\textbf{#1}}
+\DeclareNameAlias{sortname}{first-last}
+\DeclareFieldFormat{date}{(#1)}
+\renewcommand*{\newunitpunct}{\addcomma\space}
+% Don't use "In:" in bibliography. Omit urls from journal articles.
+% macro for article
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{bibindex}%
+  \usebibmacro{begentry}%
+  \usebibmacro{author/editor}%
+  \setunit{\labelnamepunct}\nopunct
+{ \addfontfeature{Color=lightgray}\itshape%
+  \usebibmacro{title}
+}
+  \newunit\newblock
+  \usebibmacro{byauthor}%
+  \newunit\newblock
+  \usebibmacro{byeditor+others}%
+  \newunit\newblock
+  \usebibmacro{journal+issuetitle}%
+  \setunit{\bibpagespunct}%
+  \printfield{pages}
+  \newunit\newblock
+  \usebibmacro{date}
+  \newunit\newblock
+  \usebibmacro{pageref}%
+  \usebibmacro{finentry}}
+% Remove dot between volume and number in journal articles.
+\renewbibmacro*{journal+issuetitle}{%
+  \usebibmacro{journal}%
+  \setunit*{\addspace}%
+  \iffieldundef{series}
+    {}
+    {\newunit
+     \printfield{series}%
+     \setunit{\addspace}}%
+  \printfield{volume}%
+  \setunit{\addcomma\space}%
+  \printfield{eid}%
+  \newunit\newblock
+  \usebibmacro{issue}%
+  \newunit}
+
+% added a trick to underline my surname
+\renewbibmacro*{name:first-last}[4]{%
+  \usebibmacro{name:delim}{#2#3#1}%
+  \usebibmacro{name:hook}{#2#3#1}%
+  \ifthenelse{\equal{#1}{Vianello}}% matches last name against YourLastName
+    {
+      \uline{% wrapped with \uline
+      \ifblank{#2}{}{\mkbibnamefirst{#2}\isdot\bibnamedelimd}%
+      \ifblank{#3}{}{%
+        \mkbibnameprefix{#3}\isdot%
+        \ifpunctmark{'}%
+          {}%
+          {\ifuseprefix{\bibnamedelimc}{\bibnamedelimd}}}%
+      \mkbibnamelast{#1}\isdot%
+      \ifblank{#4}{}{\bibnamedelimd\mkbibnameaffix{#4}\isdot}}}%
+    {% original
+      \ifblank{#2}{}{\mkbibnamefirst{#2}\isdot\bibnamedelimd}%
+      \ifblank{#3}{}{%
+        \mkbibnameprefix{#3}\isdot%
+        \ifpunctmark{'}%
+          {}%
+          {\ifuseprefix{\bibnamedelimc}{\bibnamedelimd}}}%
+      \mkbibnamelast{#1}\isdot%
+      \ifblank{#4}{}{\bibnamedelimd\mkbibnameaffix{#4}\isdot}}}
+
+\makeatletter
+
+% ----------
+% Sections
+\usepackage{sectsty}
+\usepackage[compact]{titlesec} 
+\titleformat{\section}[block]{\normalfont\Large\color{darkBlue}}{\thesection}{1em}{}[\vspace{-6pt}\textcolor{lg}{\titlerule}]
+\titleformat{\subsection}[block]{\normalfont\color{darkBlue}}{\thesection}{1em}{}
+
+
+% ----------
+%  header
+\usepackage{fancyhdr}
+	\pagestyle{fancy}					% Enabling the custom headers/footers
+\usepackage{lastpage}	
+	% Header (empty)
+	\lhead{}
+	\chead{}
+	\rhead{}
+	% Footer (you may change this to your own needs)
+	\lfoot{\footnotesize \textcolor{Gray}{\textit{Dr. Vianello Research Statement}}}
+	\cfoot{}
+	\rfoot{\footnotesize \textcolor{Gray}{\textit{page \thepage\ of \pageref{LastPage}}}}	% "Page 1 of 2"
+	\renewcommand{\headrulewidth}{0.0pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+
+% ----------
+% Change the abstract environment
+\usepackage[runin]{abstract}			% runin option for a run-in title
+\setlength\absleftindent{30pt}		% left margin
+\setlength\absrightindent{30pt}		% right margin
+\abslabeldelim{\quad}						% 
+\setlength{\abstitleskip}{-10pt}
+\renewcommand{\abstractname}{}
+\renewcommand{\abstracttextfont}{\color{bl} \small \slshape}	% slanted text
+% ----------
+%   Lettrine
+\usepackage{lettrine}
+% ----------
+% enumitem
+\usepackage{enumitem}
+
+%%% Start of the document
+\begin{document}
+\begin{flushright}
+\textcolor{darkBlue}{ \Huge
+\lettrine[lines=3,findent=-1pt, loversize = -0.42,
+lraise=0.6]{N}{icola Vianello}}\\[2pt]
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Swiss Plasma Center EPFL}}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Batiment 13, CH-1025, Lausanne }}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{+41 216934308 $\cdot$  nicola.vianello@epfl.ch }}
+\end{flushright}
+% now the title
+% ----------
+%   Title 
+\begin{flushleft} 
+\textcolor{darkBlue}{ \Huge
+\lettrine[lines=2,findent=-1pt, loversize = -0.42,
+lraise=0.6]{R}{esearch statement}} 
+\end{flushleft}
+
+
+\section*{Fluctuations in the preparation to burning plasma}
+Plasmas, and in particular Fusion plasmas represent a complex system
+where several interacting degrees of freedom coexist determining a
+variety of non-linear behaviors spreading over a broad range of
+spatio-temporal scales
+\cite{Kadomtsev:1992us,Sornette:2006dt}. It is long known that 
+transport of energy, particles and momentum cannot be correctly
+described in terms of simplified diffusion models, so that different
+paradigms are to be invoked. Proper description of plasma
+dynamics requires consequently to disentangle the role played by
+fluctuations, which are found to emerge at all spatial and temporal
+scales. My personal research activity has been devoted to the collection, analysis,
+interpretation and modeling of experimental and numerical results
+obtained in magnetized plasmas, with emphasis
+on magnetically confined ones. More in details I've focused my effort
+on electromagnetic fluctuations induced transport of energy, particle
+and momentum, interpreting the experimental findings within the wider framework of turbulence
+theory. During my research activity I have gathered a thorough 
+experience on electromagnetic transport analysis, working on different
+magnetic configurations, from Reversed Field Pinches (
+RFX-mod operating in Padova, Extrap-T2R operating in Stockholm and
+TPE-1RM20 which was in operation in Japan), stellarators (with
+experimental activity on TJ-II heliac type operating in Spain) and Tokamaks
+(ASDEX-Upgrade, JET, TCV), and low temperature plasmas like the Simple
+Magnetized Torus experiment TORPEX at EPFL. 
+
+I've started working on fluctuation during my M.Sci. thesis, by
+studying the effect of externally modified $\mathbf{E}\times\mathbf{B}$
+flow on turbulence and transport in the RFX-mod Reversed Field Pinch
+\cite{Antoni:2000p3587}, observing transport quenching caused by
+phase decoupling between fluctuations,  inhomogeneous in the
+$k_{\perp}$ spectra. The necessity of a multi-scale approach lead me to deepen my
+interest in turbulence and dynamical systems. It is known since
+pioneering work of Kolmogorov \cite{Frisch:1996ue} that a proper
+description of a non-deterministic process is based on a statistical
+approach.  The Kolmogorov hypothesis is strongly based on the
+assumption of self-similarity, but plasma turbulence, as well as turbulence observations from hydrodynamic to
+astrophysics till econophysics \cite{Sornette:2006dt}, has been proved
+to exhibit an high degree of \emph{intermittency}. I have contributed
+to proving this in a variety of experiments
+\cite{Antoni:2001p662,Vianello:2002p3579}, with a successful comparison 
+with solar wind and atmospheric turbulence data
+\cite{Carbone:2002p2809}, attaining a wide comprehension of the
+mechanism and mastering advanced investigation tools used also in other research
+fields. Stimulated from the observation of this strong intermittent
+character I focused my effort on the characterization and
+comprehension of those fluctuations (localized both in time and
+$k_{\perp}$ spectra) responsible for the multifractal nature of plasma turbulence
+\cite{Bohr:1998fn}. I've worked on the experimental characterization
+of these eddies in a variety
+of different devices and magnetic configurations
+\cite{Spolaore:2009p4115,Vianello:2010p4670,Furno:2011cs,Spolaore:2015ij}. The
+eddies are localized pressure perturbation with a vortex-like pattern in
+the plane perpendicular to the guiding field \cite{Antoni:2006p3585},
+extended along the direction of the field (they are also dubbed \emph{filaments})
+and with an associated parallel current
+\cite{Spolaore:2009p4115,Vianello:2010p4670}. These eddies form as a
+result of non-linear evolution of plasma instabilities, and among
+various possible explanation,  one of the possible mechanism has been identified as a result
+of the coupling between Drift Waves (DW) and Kinetic Alfv{\'e}n Waves
+(KAW) \cite{Vianello:2010p4670}, in analogy with what observed in the
+magnetosphere \cite{Martines:2009p4483,Sundkvist:2005is}. Extending
+the analogy to the astrophysical plasmas, a striking similarity
+between the enhancement of convective transport caused by these
+filaments (depending on the parallel closure along the field line) and
+the modification of the density gradient of the equatorial iogenic
+plasma torus in the Jovian magnetosphere \cite{Frank:2002eu} was 
+experimentally proved \cite{carralero:prl2015}. This testifies that investigation on
+plasma fluctuations as observed in fusion plasmas have a
+larger impact and exhibits deep analogies with other disciplines. 
+Expertise in
+current filaments studies has been extended to the studies of Edge
+Localized Modes (ELM)
+filaments providing for the first time an experimental direct estimation of the
+current density associated to a type-I filament
+\cite{PhysRevLett.106.125002,Naulin:2011im,Muller:2011kj,Spolaore:2015tk}.
+
+Multi-scale dynamics is involved also in the process of
+turbulent-generated flow. It is indeed well known that Turbulence, and
+in particular Drift Wave Turbulence (DWT) can spontaneously generate patterns (zonal flows and
+currents/fields, generally zonal structures (ZS)) 
+on scales that are typically larger than the perpendicular (w.r.t. the
+equilibrium magnetic field $B_0$) 
+wavelength of the underlying fluctuations, $\lambda_{\perp}$, but
+still shorter than the equilibrium nonuniformity scale length
+\cite{Hasegawa:1979cp}. 
+The emergence of this sheared ZF arises due to a spatial anisotropy of
+fluctuation coupling, through a mechanism known in the fluid
+turbulence literature as the turbulent Reynolds stress
+\cite{Tynan:2009p4426}. I deeply investigated this process \cite{Vianello:2005p1976,Vianello:2006p1149},
+which can be interpreted also as a
+non-linear energy transfer process: it is worth noting that it is one
+of the invoked mechanisms 
+to explain the bifurcation to enanched confinement regimes
+(H-modes) in tokamaks \cite{Schmitz:2012hwa}. 
+
+Apart from the aforementioned multi-scale process regarding turbulence
+and flow, which has been the primary subject of my research so far,
+other complex dynamical processes connected with the presence of non-thermal
+energetic particles (EP) are presently under consideration by the
+scientific community. This is motivated
+by the fact that EPs are expected to dominate the power balance in
+future burning fusion plasmas \cite{Zonca:2015hs} and by the necessity
+for example 
+to correctly predict the behavior of natural and injected fast
+particle in future devices. Studying the mutual
+interaction between fast particle population and thermal plasmas, in
+the framework of complex dynamics, 
+represents for me the natural prosecution of my research topic and it
+is at the basis of my application for EPFL faculty position. 
+
+The interaction between fast ion and background turbulence has to be
+considered from a dual perspective. 
+On one side the role of background fluctuations on the
+redistribution of fast ions has to be addressed. From the theoretical
+point of view as a first approximation fast ions should not be
+affected by small scale fluctuations due to their large gyroradius
+through a process known as \emph{orbit averaging}. Recent numerical and
+theoretical observations \cite{Albergante:2011bj} actually reveal
+that the influence of electrostatic turbulence on fast ions depends on the ratio
+$E/T_e$: in some cases it has been indicated as one of the causes of
+the observed experimental observations of fast broadening of current profile after
+off-axis injection of Neutral Beam
+\cite{Heidbrink:2009wv,Baranov:2009p4033}, although the question is
+still controversial.
+
+On the other hand Energetic
+particles can provide the free energy source for Shear Alfv{\'e}n
+Waves (SAW) and drift-Alfv{\'e}n waves (DAW) excitation on the micro and
+meso-scales \cite{Zonca:2015hs} with the inclusion of even shorter
+wavelengths through a process of mode conversion of SAW/DAW to kinetic
+Alfv{\'e}n waves. All of these instabilities could generate Zonal-like
+structures at intermediate scales which interact with the original
+fluctuations in a complex cross-scale self-regulated process. 
+Energetic Particle induced Zonal Structures, as those for
+example of the Energetic Particle Geodesic Acoustic Modes (EGAMS)
+\cite{Zarzoso:2013kw,Nazikian:2008hk,Ido:2011gy} have a complicated
+interaction with turbulent eddies induced by thermal ion
+instabilities: this interaction could provide enhanced plasma transport
+and it is thus obvious that in view of burning plasmas with a
+substantial fraction of energetic particles these mechanisms should be
+addressed. This is an hot topic in the fusion community but
+there is a variety of open issues which need to be investigated,
+particularly from the experimental point of view:
+\begin{description}[labelindent=0pt, labelsep*=0.3em, leftmargin=!, itemsep=0.02ex]
+\item[(i)] How is fast particle density modified in the presence of
+  different types of fluctuations? For example when switching from electron to
+  ion dominated turbulence is anomalous fast particle transport different?
+\item[(ii)] Which is the role of magnetic fluctuations in determining
+  the fast-particle current redistribution?
+\item[(iii)] How do shaping and \emph{exotic} configuration like negative
+  triangularity affect the fast-particle distribution?
+\item[(iv)] Is it possible to experimentally investigate the
+  cross-scale coupling between EP-driven ZF and DWT ZF?
+\item[(v)] How do different populations of fast particles, generated for
+  example during reconnecting processes interact with each other and
+  with the background plasma?
+\end{description}
+
+The TCV tokamak in operation at the Swiss Plasma Center at EPFL has 
+recently received a significant upgrade with the installation of a new Neutral Beam
+Injector with energy up to 30 kEV and delivered power up to 1 MW. A
+second NBI at higher energy (50 keV) is foreseen, and its procurement
+is a part of the recent financial  support granted the Swiss Government. This
+new system, coupled with the forthcoming upgrade of the Electron
+Cyclotron Resonant Heating system will allow to reach unexplored
+scenarios for this machine, with high values of normalized pressure $\beta$ and a wide range of
+$T_e/T_i$ including $T_e\sim T_i\i$ and with a significant population
+of fast ion. It appears clearly that the TCV machine could be the
+ideal test-bed for the proposed investigation of multi-scale and
+energetic particle physics, but this will require an aggressive
+program on the 
+experimental side. 
+So far indeed the tokamak is equipped with a sytem of 
+Neutral Particle Analyzers which can be used for the
+investigation of fast particles. Actually to experimentally address
+this topic new diagnostics should be installed. Among them I can list the
+following, together with possible international collaboration to be activated or reinforced:
+\begin{description}[labelindent=0pt, labelsep*=0.4em, leftmargin=!, itemsep=0.02ex]
+\item[FIDA:] \emph{Fast Ion D$_{\alpha}$ diagnostic} is based on the
+  same principle as Charge eXchange Recombination Spectroscopy,
+  considering the emission from $n=3$ to $n=2$ Balmer series, combined
+  with a proper geometrical arrangement in order to disentangle this
+  emission from other sources of radiation. Presently this diagnostic
+  is under consideration for a fast-track implementation on
+  TCV. Possible collaborations to be activated University of
+  California, Irvine, Princeton Plasma Physics Laboratory, Max Planck Instit{\"u}t f{\"u}r Plasmaphysik
+\item[FILD:] \emph{Fast Ion Loss Diagnostic} can be described as a
+  mass-spectrometer for Fast Ions providing discrimination of Energy
+  (through gyro-orbit evaluation) and pitch angle of the collected
+  fast ions. It can also be combined with photodiodes or
+  photomultipliers which can give information on fast-ion fluxes at
+  higher temporal resolution. Collaboration to be activated, Max
+  Planck Instit{\"u}t f{\"u}r Plasmaphysik
+\item[Ion Energy Analyzer probe:] This type of probe is presently
+  under development in the framework of a European collaboration and
+  it will combined with fast magnetic measurements giving the
+  possibility for local investigation of the relation between magnetic
+  fluctuations and fast ion fluxes
+\item[DLP:] \emph{directional langmuir probe} can be considered as an
+  extension of the Mach probe for flow measurement and can be used in
+  the 
+  presence of a population of fast ion induced by tangential
+  beam. The direct experience I gained in the design of probes for different
+  machines, could help me in a rapid development of this diagnostic. 
+\item[Neutron Camera:] Collimated Neutron Flux Camera for the
+  measurement of the 2.45 MeV neutron emission from the D-D fusion
+  reaction can be installed. It can provide spatial and time
+  resolved volume integrated neutron emissivity in the presence of NBI
+  heated plasmas \cite{Cecconello:2014hw}. Possible collaboration to be activated
+  University of Uppsala
+\end{description}
+To complement fast ion investigation a diagnostic for the
+determination of the current profile is mandatory, and in this
+framework the implementation of a Motional Stark Effect is suggested.
+The development, installation and exploitation of each of these 
+diagnostic systems can be performed within the cycle of a PhD thesis, offering the
+student the possibility to gain deep insight on the experiment, and
+the possibility to contribute with the data obtained in a fascinating
+and cutting edge research. All the information gained by these
+diagnostics can be coupled with the already existing fluctuations
+diagnostics, like the correlation ECE, Doppler Reflectometry and Tangential
+PCI which would give the fundamental information on the typical
+spatio-temporal scale of underlying turbulence. Such an ambitious
+experimental program must be tightly linked to the theory department
+of plasma physics of SPC. Indeed an effort is already in progress (see
+for example \cite{Albergante:2011bj,Pfefferle:2014bk}) for
+the investigation of the fast ion dynamics but the proposed
+experimental program could provide the indispensable results to test
+and validate theoretical models. On this,  development of synthetic
+diagnostics for proper interpretation of experimental data is foreseen
+and envisaged as well as the application of a transport paradigm different
+from the usual diffusion/convective one (non-diffusive, Levy Statistics
+etc. see for example \cite{Perrone:2013hp,Greco:2003fx}). This could strengthen the collaboration between
+experiment and theory department. 
+
+As a final remark, it must be noted that fast ion studies on basic
+plasma devices is already ongoing in the basic plasma
+department. Apart from that a program for the establishment of an
+astrophysical plasma experiment is foreseen in the following year for
+the SPC. 
+Within this program the study of energetic ions would represent an 
+important ramification considering that ion acceleration is almost ubiquitous in
+astrophysical phenomena,  from reconnection in the planet
+magnetosphere \cite{space-science-review} to shock waves driven
+outward by Coronal Mass Ejections (CMEs) or from solar flares \cite{Reames:1999bu} 
+Thus
+technology and expertise developed for the Tokamak experiment could be
+transferred in the view of a cross-fertilization between different
+branches of the plasma physics.
+
+Finally addressing the role of fast ions and its relation with
+turbulence media represents a frontier research field in the
+plasma science. It requires a deep knowledge of both plasma
+physics and non-linear dynamics, as multi-scale processes are involved
+and paradigms beyond simple diffusive processes must be considered. I'm
+convinced that my previous research on non-linear dynamics and
+fluctuations gives me the proper background to tackle this
+subject despite the novelty of the research. I'm convinced that
+the proposed plan will put the Swiss Plasma Center at the forefront in
+the plasma physics research, and I'm excited at the idea of possibly
+contributing to this.
+\clearpage
+\printbibliography[title=Personal publications cited,notkeyword=others, prefixnumbers={A}, resetnumbers=true]
+\printbibliography[title=Other Sources, keyword=others, prefixnumbers={B}, resetnumbers=true]
+\end{document}
