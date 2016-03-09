@@ -2,8 +2,9 @@
 - 2002: PhD in Energetics, University of Padova;
 - 1999: Deegree in Physics, summa cum laude University of Padova.
 * Carrier 
-- 2009-Date: Researcher (III level) at the CNR (National Research Council), working at Istituto Gas Ionizzati, Consorzio RFX, Padova, Italy
-- May 2003 - July 20009 : Researcher (6th-7th) level at  Consorzio RFX, Associazione Euratom-ENEA sulla Fusione, Padova, Italy
+- March 2015-Date: Researcher at Swiss Plasma Center, EPFL, Lausanne CH
+- 2009-March 2015: Researcher (III level) at the CNR (National Research Council), working at Istituto Gas Ionizzati, Consorzio RFX, Padova, Italy
+- May 2003 - July 2009 : Researcher (6th-7th) level at  Consorzio RFX, Associazione Euratom-ENEA sulla Fusione, Padova, Italy
 * Mobility contracts
 - 2001 March-June, Visiting scientist at KTH, Stockholm under Euratom mobility scheme
 - 2002 May-June, Visiting scientist at KTH, Stockholm under Euratom mobility scheme
@@ -18,7 +19,8 @@
 - 2012 Februar-March, Secondment staff at EFDA-JET, CCFE Culham, UK
 * Research areas
 - Plasma physics and magnetically confined plasmas in Reversed Field Pinch (RFP) configuration. Particle, energy and momentum transport, turbulence and non-linear dynamics 
-- Plasma physics and magnetically confined plasmas in TOKAMAK configuration (pedestal and Divertor Physics, Particle exhausts, non-linear physics, ELMs)
+- Plasma physics and magnetically confined plasmas in TOKAMAK configuration (pedestal and Divertor Physics, Particle exhausts,
+non-linear physics, ELMs, L-H transition, Impurity Transport)
 - Turbulence in dynamical system: comparison between astrophysical and laboratory plasmas
 * Scientific participation to international and national (Italian) research projects:
 - From 2003, participation, as researcher, to the RFX project for the study of plasmas of controlled thermonuclear fusion interest. From 2005, such participation is performed within the ET.P05.003 activity “Esperimento RFX ed attività collegate" within the ET.P05 project “Partecipazione ai programmi nazionali e internazionali sulla Fusione” of the Energy and Transportation Department of the Italian National Research Council (CNR).
@@ -31,28 +33,29 @@
 - Physics Department, University of Wisconsin, Madison, WI, USA
 - Max-Planck-Institut fur Plasmaphysik, Garching, Germany
 - Riso/DTU, Roskilde, Denmark
-- Centre de Recherches en Physique des Plasmas, EPFL, Lausanne, Switzerland
+- Consorzio RFX, Padova
 - Euratom/Ciemat association, Madrid, Spain
 - IPP/CR, Prague, Czech Republic
 - Culham Centre for Fusion Science, Culham UK
 * Organizing, editorial and referee activities
+- 2014-2015 Scientific coordinators of experiments in AUG and TCV under MST1 Framework Program (AUG14-2.2-3, TCV15-2.2-3, TCV15-1.5-1)
 - 2009-2010 Task Force leader for RFX-mod experiment
 - 2011 Coordinator of EFDA working group: "3D field effects in edge and SOL and diagnostic development"
 - Programme Commitee for the 17th EU-US Transport Task Force Meeting
-- Referee for the international journals: Nuclear Fusion, Plasma Physics and Controlled Fusion, New Journal of Physics
+- Referee for the international journals: Nuclear Fusion, Plasma Physics and Controlled Fusion, New Journal of Physics, Physical Review Letters
 * Awards
 - 2011 Award from Consorzio RFX , EURATOM-ENEA Association, Padova for "Innovative individual contribution in the fields of plasma modelization, theory and data interpretation”.
 - 2008 Award from Consorzio RFX , EURATOM-ENEA Association, Padova for "Innovative individual contribution in the fields of plasma modelization, theory and data interpretation”.
 - 2004 Award from Consorzio RFX , EURATOM-ENEA Association, Padova for "Innovative individual contribution in the fields of plasma modelization, theory and data interpretation”. 
 * Teaching activity
 - 2008-2010 Assistant professor Course "Fluid and Plasma Physics", “Laurea Magistrale” degree in Physics, Physics and Astronomy Department, University of  Padova.
-- 2011-2013 Assistant professor Course "Fondamenti di Fisica del Plasma", "Laurea Triennale" degree in Physics, Physics and Astronomy Department, University of  Padova.
-- Co-tutor of 2 thesis of Laurea triennale, 3 thesis of Laurea specialistica
+- 2011-2015 Assistant professor Course "Fondamenti di Fisica del Plasma", "Laurea Triennale" degree in Physics, Physics and Astronomy Department, University of  Padova.
+- Co-tutor of 2 Batchelor Thesis, 3 M.Sci. Thesis, 1 PhD thesis
 * Publications
-- Author of  88 publications  on international journals (h-index at 31 January 2013:18)
-- Author of more than 81 contributes in conferences proceedings (18 oral presentations)
+- Author of  100 publications  on international journals (h-index at <2015-11-24 Tue> 21)
+- Author of more than 87 contributes in conferences proceedings (18 oral presentations)
 * Main results
-I’ve been involved in fusion plasma science since my M.Sci. thesis in Physics in 1999. During these 13 years
+I’ve been involved in fusion plasma science since my M.Sci. thesis in Physics in 1999. During all these years 
 I’ve tried to expand as much as possible my personal research skills focusing in particular on collection,
 analysis, interpretation and modeling of experimental data collected in fusion oriented experiments
 (Reversed Field Pinches, Tokamaks and Stellarators), with particular emphasis on the comparison with theoretical and numerical results.
@@ -61,17 +64,30 @@ Main research subjects may be summarized as follow:
  1. Electromagnetic turbulence induced transport:, with emphasis on anomalous transport studies induced by different source of turbulence:
  electrostatic as Drift-induced or interchange induced transport, or electromagnetic including the
  role of magnetic flutter fluuxes in the mechanism of particle and energy losses
- 2. Statistical analysis of plasma turbulence: the topic allowed me to get confident with advanced statistical tool (as Wavelet Transforms, Local Intermittency Measurements, Waiting Time distribution) and with dynamical system model as Self-Organized Criticality (SOC) systems, shell-models Blobs and ELM filaments: non linear coherent structures arising as a non-linear evolution of plasma instabilities have been experimentally investigated. The research includes studies on the generation and evolution of these structures including their parallel dynamics with emphasis on turbulent blobs and ELM fillaments
- 3. Sheared flow generation and non linear interaction between turbulence and sheared flows including experimental investigation of the role of Maxwell and Reynolds stress in the momentum generation of edge flow of Reversed Field Pinch
- 4. Magnetic topology and its relation with plasma flow, with emphasis on the effect of non-axysimmetric magnetic field perturbation on kinetic properties of the plasma, as plasma flow, ambipolar electric field and Plasma Wall Interaction
+ 2. Statistical analysis of plasma turbulence: the topic allowed me to get confident with advanced statistical tool
+ (as Wavelet Transforms, Local Intermittency Measurements, Waiting Time distribution) and with dynamical system model
+ as Self-Organized Criticality (SOC) systems, shell-models Blobs and ELM filaments:
+ non linear coherent structures arising as a non-linear evolution of plasma instabilities have been
+ experimentally investigated. The research includes studies on the generation
+ and evolution of these structures including their parallel dynamics with emphasis on turbulent blobs and ELM fillaments
+ 3. Sheared flow generation and non linear interaction between turbulence and sheared flows including experimental
+ investigation of the role of Maxwell and Reynolds stress in the momentum generation of edge flow of Reversed Field Pinch
+ 4. Magnetic topology and its relation with plasma flow, with emphasis on the effect of non-axysimmetric magnetic
+ field perturbation on kinetic properties of the plasma, as plasma flow, ambipolar electric field and Plasma Wall Interaction
+ 5. L-H transition studies with emphasis on Limit Cycle Oscillation and dithering phase
+ 6. Impurity transport in the presence of MHD activity
 
 Among the results the following should be highlighted:
 1. First experimental proof of non applicability of Self Organized Criticality paradigm to edge plasma turbulence [PRL 2001, PRL2011]
 2. First experimental evidence of non-linear generation of edge 􏰆flow in Reversed Field Pinches through Reynolds stress mechanism [PRL 2005]
 3. First experimental measurements of parallel current associated to coherent structures in a fusion relevant plasma [PRL2009]
-4. First experimental evidence of the existence of a particular class of coherent structure, named Drift-Kinetic Alfvén vortices, arising because of the non linear coupling of Drift and Kinetic Alfvén waves in a laboratory plasma [Nuclear Fusion 2010]. This type of structure has been previously detected in the magneto- sphere
+4. First experimental evidence of the existence of a particular class of coherent structure, named Drift-Kinetic Alfven vortices, arising because of the non linear coupling of Drift and Kinetic Alfvén waves in a laboratory plasma [Nuclear Fusion 2010]. This type of structure has been previously detected in the magneto- sphere
 5. First experimental estimate of parallel current associated to Edge Localized Modes filament [PRL 2011]
 6. First experimental measurements of 2D current distribution associated to plasma blobs [PRL 2011]
-7. Experimental evidence of transition towards helical states in high current Reversed Field Pinch
-operation [Nature Physics 2009]
-In all my carrier I’ve always tried to conjugate a strong experimental insight on the data collection, participating in all the experimental activities mandatory in order to obtain useful experimental results, and a rigorous theoretical approach in the data analysis and interpretation, using theories and numerical tools as a frame- work to understand real plasma signals. is approach helped me to build a bridge between theories and experiments, a necessary effort in order to understand complex plasma dynamics.
+7. Experimental evidence of transition towards helical states in high current Reversed Field Pinch operation [Nature Physics 2009]
+8. Experimental evidence on the role of turbulence and filaments in the saturation of SOL in high density regime [PRL 2015]
+In all my carrier I’ve always tried to conjugate a strong experimental insight on the data collection,
+participating in all the experimental activities mandatory in order to obtain useful experimental results,
+and a rigorous theoretical approach in the data analysis and interpretation,
+using theories and numerical tools as a frame- work to understand real plasma signals. This
+approach helped me to build a bridge between theories and experiments, a necessary effort in order to understand complex plasma dynamics.
