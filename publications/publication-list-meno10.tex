@@ -21,7 +21,7 @@
 % packages to make header
 \usepackage{lettrine}
 \usepackage{graphicx} % for resizebox
-\addbibresource{~/Dropbox/Work/Curriculum/utils/biblio10.bib}
+\addbibresource{~/Dropbox/Work/Curriculum/utils/biblio_meno10.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%  To highlight author name in publications sections   %%%%%%
@@ -30,7 +30,7 @@
 % otherwise try, e.g. \bibliographystyle{plain}
 
 % \myname{*} will appear bold in \pubsin{}
-\def\myname{N. Vianello}%
+\def\myname{Nicola Vianello}%
 
 % you could change \textbf to \emph or any other command
  \newcommand{\FormatName}[1]{%
@@ -42,29 +42,29 @@
    \fi
  }
 
-\usepackage{xpatch}% or use http://tex.stackexchange.com/a/40705
+% \usepackage{xpatch}% or use http://tex.stackexchange.com/a/40705
 
-\newbibmacro*{name:bold}[2]{%
-  \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\listbreak}{}}%
-  \dolistloop{\boldnames}%
-}
+% \newbibmacro*{name:bold}[2]{%
+%   \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\listbreak}{}}%
+%   \dolistloop{\boldnames}%
+% }
 
-\newcommand*{\boldnames}{}
+% \newcommand*{\boldnames}{}
 
-\xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
-\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
-\xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
-\xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
+% \xpretobibmacro{name:family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+% \xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+% \xpretobibmacro{name:family-given}{\begingroup\usebibmacro{name:bold}{#1}{#2}}{}{}
+% \xpretobibmacro{name:delim}{\begingroup\normalfont}{}{}
 
-\xapptobibmacro{name:family}{\endgroup}{}{}
-\xapptobibmacro{name:given-family}{\endgroup}{}{}
-\xapptobibmacro{name:family-given}{\endgroup}{}{}
-\xapptobibmacro{name:delim}{\endgroup}{}{}
+% \xapptobibmacro{name:family}{\endgroup}{}{}
+% \xapptobibmacro{name:given-family}{\endgroup}{}{}
+% \xapptobibmacro{name:family-given}{\endgroup}{}{}
+% \xapptobibmacro{name:delim}{\endgroup}{}{}
 
-\renewcommand*{\boldnames}{}
-\forcsvlist{\listadd\boldnames}
-{{d74ebb03c6b528ca40beada6d489b36f}, {ad745a251980aeef9151fbba32f86c8d}}
- 
+% \renewcommand*{\boldnames}{}
+% \forcsvlist{\listadd\boldnames}
+% {{d74ebb03c6b528ca40beada6d489b36f}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -91,8 +91,24 @@ lraise=0.6]{N}{icola Vianello}}\\[2pt]
 \end{flushright}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{cvblock}{Lista degli ulteriori prodotti della ricerca}
+\end{cvblock}
 \nocite{*}
-\printbibliography[type=article, title={Prodotti della ricerca scelti}, heading=subbibliography, prefixnumbers={A}, resetnumbers=true]
+Ho pubblicato un totale di \printbibliography[env=counter,
+ heading=counter, type=article, resetnumbers=true] articoli in riviste
+ Peer
+ Reviewed (in aggiunta ai 10 prodotti della ricerca scelti),  
+ \printbibliography[env=counter, heading=counter, type=inproceedings, resetnumbers=true]
+ Proceedings in atti di conferenza e presentato
+ \printbibliography[env=counter, heading=counter, type=misc,
+ resetnumbers=true] contributi orali. \\
+h-index factor: \textcolor{red}{23} fonte ISI Web of Knowledge (ultimo update \today), \textcolor{red}{29} fonte Google Scholar (ultimo update \today)
 
-%\input{../english/declaration-en-publication-list}
+\printbibliography[type=article, title={Article in peer-review journal}, heading=subbibliography, prefixnumbers={A}, resetnumbers=true]
+\printbibliography[type=inproceedings, title={National and
+   international conference}, heading=subbibliography, prefixnumbers={B}, resetnumbers=true]
+\printbibliography[type=misc, title={First author oral contribution}, heading=subbibliography, prefixnumbers={C}, resetnumbers=true]
+\printbibliography[type=report, title={Report}, heading=subbibliography, prefixnumbers={D}, resetnumbers=true]
+
+\input{../english/declaration-en-publication-list}
 \end{document}
