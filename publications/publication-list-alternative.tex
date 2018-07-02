@@ -22,7 +22,10 @@
 \usepackage{lettrine}
 \usepackage{graphicx} % for resizebox
 \addbibresource{~/Dropbox/Work/Curriculum/utils/biblio.bib}
-
+% for having the appropriate section in the bibliography
+\DeclareRefcontext{ar}{labelprefix=A}
+\DeclareRefcontext{cf}{labelprefix=B}
+\DeclareRefcontext{or}{labelprefix=C}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%  To highlight author name in publications sections   %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -76,13 +79,19 @@ I have authored a total number of \printbibliography[env=counter,
  conference proceedings and personally presented
  \printbibliography[env=counter, heading=counter, type=misc, resetnumbers=true] oral
  contributions. \\
-h-index factor: 21 according to ISI Web of Knowledge (last update \today)
+h-index factor: 23 according to ISI Web of Knowledge (last update
+\today) or 31 according to Google scholar (last update \today)
 
-\printbibliography[type=article, title={Article in peer-review journal}, heading=subbibliography, prefixnumbers={A}, resetnumbers=true]
+\newrefcontext{ar}
+\printbibliography[type=article, title={Article in peer-review
+  journal}, heading=subbibliography, resetnumbers=true]
+\newrefcontext{cf}
 \printbibliography[type=inproceedings, title={National and
-   international conference}, heading=subbibliography, prefixnumbers={B}, resetnumbers=true]
+   international conference}, heading=subbibliography,
+ prefixnumbers={B}, resetnumbers=true]
+ \newrefcontext{or}
 \printbibliography[type=misc, title={First author oral contribution}, heading=subbibliography, prefixnumbers={C}, resetnumbers=true]
-\printbibliography[type=report, title={Report}, heading=subbibliography, prefixnumbers={D}, resetnumbers=true]
+%\printbibliography[type=report, title={Report}, heading=subbibliography, prefixnumbers={D}, resetnumbers=true]
 
 \input{../english/declaration-en-publication-list}
 \end{document}
