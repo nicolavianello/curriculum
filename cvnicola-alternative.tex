@@ -14,7 +14,10 @@
 \usepackage{etoolbox}
 \newtoggle{nicolacv}
 \togglefalse{nicolacv}
-
+% for having the appropriate section in the bibliography
+\DeclareRefcontext{ar}{labelprefix=A}
+\DeclareRefcontext{cf}{labelprefix=B}
+\DeclareRefcontext{or}{labelprefix=C}
 %%%% XeLaTeX settings - Use these to set document fonts %%%
 \usepackage{fontspec,xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
@@ -90,11 +93,12 @@ lraise=0.6]{N}{icola Vianello}}\\[2pt]
 \input{english/responsabilities-en}
 \input{english/teaching-en}
 \input{english/skills-en}
-\input{english/publication-alternative-curriculum}
+%\input{english/publication-alternative-curriculum}
 \input{english/research-en}
 \input{english/referees-en}
 \input{english/other-en}
 \input{english/declaration-en}
+\input{english/publication-en}
 %\input{english/languages-en}
 %\input{english/collaborations}
 \end{document}
