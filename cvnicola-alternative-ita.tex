@@ -1,0 +1,103 @@
+%% this is a second template for the curriculum vitae. I will use the
+%% same approach used for the cvnicola.tex referring to the same
+%% files in utils but with a different toggle so we do not use the
+%% template used in the other for of curriculum
+
+
+\documentclass[10pt, a4paper]{nicola-cv-alternative}
+
+\usepackage{datenumber, fp}
+\usepackage[italian]{babel}
+% to compute the date difference from M.Sci. degree
+% biblio sources
+\addbibresource{utils/biblio.bib}
+% this is choosing between files
+\usepackage{etoolbox}
+\newtoggle{nicolacv}
+\togglefalse{nicolacv}
+% for having the appropriate section in the bibliography
+\DeclareRefcontext{ar}{labelprefix=A}
+\DeclareRefcontext{cf}{labelprefix=B}
+\DeclareRefcontext{or}{labelprefix=C}
+%%%% XeLaTeX settings - Use these to set document fonts %%%
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\newfontfamily\bodyfont[]{Helvetica Neue}
+\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
+\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light} % same font used in
+                               
+% packages to make header
+\usepackage{lettrine}
+\usepackage{graphicx} % for resizebox
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  To highlight author name in publications sections   %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{myPlain}
+% otherwise try, e.g. \bibliographystyle{plain}
+
+% \myname{*} will appear bold in \pubsin{}
+\def\myname{Nicola Vianello}%
+
+% you could change \textbf to \emph or any other command
+ \newcommand{\FormatName}[1]{%
+   \edef\name{#1}%
+   \ifx\name\myname
+     \textbf{#1}%
+   \else
+        #1%
+   \fi
+ }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\newcounter{dateone}%
+\newcounter{datetwo}%
+\setmydatenumber{dateone}{1999}{01}{01}%
+\setmydatenumber{datetwo}{\the\year}{\the\month}{\the\day}%
+\FPsub\result{\thedatetwo}{\thedateone}
+\FPdiv\mydegree{\result}{365.2425}
+%\mydegree
+
+% if there are publications to be added
+% comment out otherwise
+%\nobibliography{utils/biblio}
+
+%%%%%%% Title/Heading/Name %%%%%%%%%%%%
+% You're on your own here... 
+
+\begin{flushright}
+\textcolor{darkBlue}{ \Huge
+\lettrine[lines=3,findent=-1pt, loversize = -0.42,
+lraise=0.6]{N}{icola Vianello}}\\[2pt]
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Consorzio RFX-CNR}}\\
+%\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Consiglio Nazionale delle Ricerche}}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{C.so Stati Unit 4,
+    I-35127,  Padova}}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{+39 0498295991 $\cdot$  nicola.vianello@igi.cnr.it }}
+
+\end{flushright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% I structured here using the same approach and the same 
+\input{italiano/personal-ita}
+\input{italiano/education-ita}
+\input{italiano/employment-ita}
+\input{italiano/competition-ita}
+\input{italiano/further-experience-ita}
+\input{italiano/invited-lectures}
+\input{italiano/responsabilities-ita}
+\input{italiano/teaching-ita}
+\input{italiano/skills-ita}
+\input{italiano/languages-ita}
+\input{italiano/research-ita}
+\input{italiano/referees-ita}
+\input{italiano/other-ita}
+\input{italiano/publication-ita}
+\input{italiano/declaration-ita}
+\end{document}
