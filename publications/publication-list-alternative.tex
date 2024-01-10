@@ -21,11 +21,13 @@
 % packages to make header
 \usepackage{lettrine}
 \usepackage{graphicx} % for resizebox
-\addbibresource{~/Dropbox/Work/Curriculum/utils/biblio.bib}
+\addbibresource{../utils/biblio.bib}
+\addbibresource{../utils/biblio-team.bib}
 % for having the appropriate section in the bibliography
 \DeclareRefcontext{ar}{labelprefix=A}
 \DeclareRefcontext{cf}{labelprefix=B}
 \DeclareRefcontext{or}{labelprefix=C}
+\DeclareRefcontext{tm}{labelprefix=D}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%  To highlight author name in publications sections   %%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -74,23 +76,27 @@ lraise=0.6]{N}{icola Vianello}}\\[2pt]
 \end{cvblock}
 \nocite{*}
 I have authored a total number of \printbibliography[env=counter,
- heading=counter, type=article, resetnumbers=true] Articles in peer reviewed journal,  
- \printbibliography[env=counter, heading=counter, type=inproceedings, resetnumbers=true]
+ heading=counter, type=article, resetnumbers=true, notkeyword={team}] Articles in peer reviewed journal,  
+ \printbibliography[env=counter, heading=counter, type=inproceedings, resetnumbers=true, notkeyword={team}]
  conference proceedings and personally presented
- \printbibliography[env=counter, heading=counter, type=misc, resetnumbers=true] oral
- contributions. \\
+ \printbibliography[env=counter, heading=counter, type=misc, resetnumbers=true, notkeyword={team}] oral
+ contributions
+ % and included in the Team List of .\printbibliography[env=counter,
+ % heading=counter, type=article, resetnumbers=true, keyword={team}] Article. \\
 h-index factor: 23 according to ISI Web of Knowledge (last update
 \today) or 31 according to Google scholar (last update \today)
 
 \newrefcontext{ar}
 \printbibliography[type=article, title={Article in peer-review
-  journal}, heading=subbibliography, resetnumbers=true]
+  journal}, heading=subbibliography, resetnumbers=true, notkeyword={team}]
 \newrefcontext{cf}
 \printbibliography[type=inproceedings, title={National and
    international conference}, heading=subbibliography,
- prefixnumbers={B}, resetnumbers=true]
+ prefixnumbers={B}, resetnumbers=true, notkeyword={team}]
  \newrefcontext{or}
-\printbibliography[type=misc, title={First author oral contribution}, heading=subbibliography, prefixnumbers={C}, resetnumbers=true]
+\printbibliography[type=misc, title={First author oral contribution}, heading=subbibliography, prefixnumbers={C}, resetnumbers=true, notkeyword={team}]
+%  \newrefcontext{tm}
+% \printbibliography[type=misc, title={Publications in Team list}, heading=subbibliography, prefixnumbers={d}, resetnumbers=true, keyword={team}]
 %\printbibliography[type=report, title={Report}, heading=subbibliography, prefixnumbers={D}, resetnumbers=true]
 
 \input{../english/declaration-en-publication-list}

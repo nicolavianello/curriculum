@@ -4,7 +4,7 @@
 %% template used in the other for of curriculum
 
 
-\documentclass[10pt, a4paper]{nicola-cv-alternative}
+\documentclass[9pt, a4paper]{nicola-cv-alternative}
 
 \usepackage{datenumber, fp}
 % to compute the date difference from M.Sci. degree
@@ -12,13 +12,6 @@
 \addbibresource{utils/biblio.bib}
 % this is choosing between files
 \usepackage{etoolbox}
-\usepackage{eurosym}
-\newtoggle{nicolacv}
-\togglefalse{nicolacv}
-% for having the appropriate section in the bibliography
-\DeclareRefcontext{ar}{labelprefix=A}
-\DeclareRefcontext{cf}{labelprefix=B}
-\DeclareRefcontext{or}{labelprefix=C}
 %%%% XeLaTeX settings - Use these to set document fonts %%%
 \usepackage{fontspec,xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
@@ -52,7 +45,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+%\AtEveryCitekey{\clearfield{title}}
+\DeclareFieldFormat[article]{title}{}
+\AtBeginBibliography{\footnotesize}
 \begin{document}
 
 \newcounter{dateone}%
@@ -62,7 +57,6 @@
 \FPsub\result{\thedatetwo}{\thedateone}
 \FPdiv\mydegree{\result}{365.2425}
 %\mydegree
-
 % if there are publications to be added
 % comment out otherwise
 %\nobibliography{utils/biblio}
@@ -72,10 +66,10 @@
 
 \begin{flushright}
 \textcolor{darkBlue}{ \Huge
-\lettrine[lines=5,findent=-2pt, loversize = -0.42,
+\lettrine[lines=3,findent=-1pt, loversize = -0.42,
 lraise=0.6]{N}{icola Vianello}}\\[2pt]
-%\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Consorzio RFX-CNR}}\\
-\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{ISTP - Consiglio Nazionale delle Ricerche}}\\
+\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Consorzio RFX-CNR}}\\
+%\textcolor{Gray}{\resizebox{0.288\linewidth}{!}{Consiglio Nazionale delle Ricerche}}\\
 \textcolor{Gray}{\resizebox{0.288\linewidth}{!}{C.so Stati Unit 4,
     I-35127,  Padova}}\\
 \textcolor{Gray}{\resizebox{0.288\linewidth}{!}{+39 0498295991 $\cdot$  nicola.vianello@igi.cnr.it }}
@@ -85,30 +79,11 @@ lraise=0.6]{N}{icola Vianello}}\\[2pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % I structured here using the same approach and the same 
-\input{english/personal-en}
-\input{english/motivation-en}
-\input{english/employment-en}
-\input{english/education-en}
-\input{english/summary-motivation}
-\input{english/responsabilities-en}
-\input{english/competion-en}
-\input{english/further-experience-en}
-\input{english/invited-lectures}
-\input{english/teaching-en}
-\input{english/commitee-en}
-\input{english/participation-en}
-%\input{english/languages-en}
-\input{english/publication-en}
-\input{english/declaration-en}
-%
-% %\input{english/publication-alternative-curriculum}
-% \input{english/other-schools}
-% \input{english/skills-en}
-% \input{english/referees-en}
-% \input{english/other-en}
-% \input{english/languages-en}
-
-
-
-%\input{english/collaborations}
+%\input{english-short/personal-en}
+\input{english-short/education-en}
+\input{english-short/employment-en}
+\input{english-short/responsabilities-en-singlepage}
+%\input{english-short/teaching-en-short}
+\input{english-short/research-en-singlepage}
+\input{english-short/publication-alternative-curriculum}
 \end{document}
