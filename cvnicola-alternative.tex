@@ -9,7 +9,9 @@
 \usepackage{datenumber, fp}
 % to compute the date difference from M.Sci. degree
 % biblio sources
-\addbibresource{utils/biblio.bib}
+\addbibresource{utils/biblio-journal.bib}
+\addbibresource{utils/biblio-proceedings.bib}
+\addbibresource{utils/biblio-oral.bib}
 % this is choosing between files
 \usepackage{etoolbox}
 \usepackage{eurosym}
@@ -17,8 +19,8 @@
 \togglefalse{nicolacv}
 % for having the appropriate section in the bibliography
 \DeclareRefcontext{ar}{labelprefix=A}
-\DeclareRefcontext{cf}{labelprefix=B}
-\DeclareRefcontext{or}{labelprefix=C}
+%\DeclareRefcontext{cf}{labelprefix=B}
+\DeclareRefcontext{or}{labelprefix=B}
 %%%% XeLaTeX settings - Use these to set document fonts %%%
 \usepackage{fontspec,xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
@@ -86,17 +88,17 @@ lraise=0.6]{N}{icola Vianello}}\\[2pt]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % I structured here using the same approach and the same 
 \input{english/personal-en}
-\input{english/motivation-en}
+%\input{english/motivation-en}
 \input{english/employment-en}
 \input{english/education-en}
-\input{english/summary-motivation}
+%\input{english/summary-motivation}
 \input{english/responsabilities-en}
 \input{english/competion-en}
 \input{english/further-experience-en}
-\input{english/invited-lectures}
-\input{english/teaching-en}
-\input{english/commitee-en}
-\input{english/participation-en}
+ \input{english/invited-lectures}
+ \input{english/teaching-en}
+ \input{english/commitee-en}
+%\input{english/participation-en}
 %\input{english/languages-en}
 \input{english/publication-en}
 \input{english/declaration-en}

@@ -12,6 +12,13 @@
 \addbibresource{utils/biblio.bib}
 % this is choosing between files
 \usepackage{etoolbox}
+\usepackage{eurosym}
+\newtoggle{nicolacv}
+\togglefalse{nicolacv}
+% for having the appropriate section in the bibliography
+\DeclareRefcontext{ar}{labelprefix=A}
+\DeclareRefcontext{cf}{labelprefix=B}
+\DeclareRefcontext{or}{labelprefix=C}
 %%%% XeLaTeX settings - Use these to set document fonts %%%
 \usepackage{fontspec,xltxtra,xunicode}
 \defaultfontfeatures{Mapping=tex-text}
